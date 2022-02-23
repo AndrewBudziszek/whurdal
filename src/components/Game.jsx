@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactCardFlip from 'react-card-flip';
 
 function Game() {
     let [currentGuess, setCurrentGuess] = useState(['W', 'H', 'E', 'A', 'T']);
