@@ -4,12 +4,12 @@ function Game() {
     let [currentGuess, setCurrentGuess] = useState(['W', 'H', 'E', 'A', 'T']);
     let [tries, setTries] = useState(['W', 'H', 'E', 'A', 'T']);
     let [triesState, setTriesState] = useState([])
-    let absentBoxClassName = 'inline-flex justify-center align-center leading-8 outline outline-3 outline-gray-700 h-12 w-12 uppercase text-white font-bold p-2'
+    let absentBoxClassName = 'inline-flex justify-center align-center leading-8 outline outline-2 outline-gray-700 h-12 w-12 uppercase text-white font-bold p-2'
     let correctBoxClassName = '';
     let presentBoxClassName = ''
     return (
         <>
-            <div className="grid py-6 place-items-center">
+            <div className="grid py-6 gap-x-0 place-items-center">
                 {
                     tries.map((a) => {
                         return (
