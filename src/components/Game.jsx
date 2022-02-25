@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GameContext } from './GameContext';
+
 
 function Game() {
-    let [currentGuess, setCurrentGuess] = useState(['W', 'H', 'E', 'A', 'T']);
-    let [tries, setTries] = useState(['W', 'H', 'E', 'A', 'T']);
-    let [triesState, setTriesState] = useState([])
-    let absentBoxClassName = 'inline-flex justify-center content-center border-2 border-gray-700 h-12 w-12 uppercase text-white font-bold p-2'
-    let correctBoxClassName = '';
-    let presentBoxClassName = ''
+    let { currentGuess, tries } = useContext(GameContext)
+    let absentBoxClassName = 'inline-flex justify-center content-center border-2 border-gray-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
+    let correctBoxClassName = 'inline-flex justify-center content-center border-2 border-green-700 bg-green-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
+    let presentBoxClassName = 'inline-flex justify-center content-center border-2 border-yellow-700 bg-yellow-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
     return (
         <>
             <div className="grid pt-5 place-items-center max-w-screen-lg m-auto">
                 {
-                    tries.map((a) => {
+                    tries.map((gameTry) => {
                         return (
                             <div className="inline-grid grid-cols-5 gap-5 pb-2 place-items-center">
                                 {
-                                    currentGuess.map(letter => {
+                                    gameTry.split('').map(letter => {
                                         return (
                                             <div className={absentBoxClassName}>{letter}</div>
                                         )
