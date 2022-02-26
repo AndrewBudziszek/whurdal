@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { GameContext } from './GameContext';
 import Keyboard from 'react-simple-keyboard';
+import { getTodaysWord } from '../assets/wordList';
 import 'react-simple-keyboard/build/css/index.css';
 
 const layout = {
@@ -19,7 +20,7 @@ const display = {
 
 function GameKeyboard() {
   const keyboard = useRef();
-  const { currentGuessIndex, setCurrentGuessIndex, tries, setTries } = useContext(GameContext);
+  const { currentGuessIndex, setCurrentGuessIndex, tries, setTries, setInProgress } = useContext(GameContext);
   let index = 0;
 
   function onChange(input) {
@@ -42,10 +43,16 @@ function GameKeyboard() {
   function onKeyPress(input) {
     if (input === '{ent}') {
       if (validGuess()) {
-        setCurrentGuessIndex(currentGuessIndex + 1)
-        keyboard.current.setInput('')
-        index++;
-        setTries(tries);
+        if(tries[currentGuessIndex] === getTodaysWord()) {
+          setInProgress(false);
+          setCurrentGuessIndex(currentGuessIndex + 1)
+          keyboard.current.destroy();
+        } else {
+          setCurrentGuessIndex(currentGuessIndex + 1)
+          keyboard.current.setInput('')
+          index++;
+          setTries(tries);
+        }
       } else {
         console.log('Submitted INVALID guess')
       }
