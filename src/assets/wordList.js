@@ -78,7 +78,8 @@ const wordList = [
     'DELTA',
     'GRIFT',
     'SPANK',
-    'ABOUT'
+    'ABOUT',
+    'CHEWY'
 ];
 
 function returnTodaysWord(offsetFromStartDate) {
