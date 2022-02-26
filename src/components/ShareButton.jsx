@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { getTodaysWord, getDaysSinceBeginning } from '../assets/wordList';
 import { GameContext } from './GameContext';
+import {toast} from 'react-toastify'
 
 
 function ShareButton() {
@@ -10,7 +11,10 @@ function ShareButton() {
         <div>
             <button
                 className='bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded'
-                onClick={() => navigator.clipboard.writeText(generateShareSnippet(tries, currentGuessIndex))}
+                onClick={() => {
+                    navigator.clipboard.writeText(generateShareSnippet(tries, currentGuessIndex));
+                    toast('📋 Copied results to clipboard!')
+                }}
             >
                 Share
             </button>

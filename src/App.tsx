@@ -4,7 +4,11 @@ import Game from './components/Game'
 import GameKeyboard from './components/GameKeyboard';
 import ShareButton from './components/ShareButton';
 import { GameContext } from './components/GameContext';
+import { ToastContainer, Flip } from 'react-toastify';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+import GameCompleteModal from './components/GameCompleteModal';
+
 
 
 function App() {
@@ -14,17 +18,28 @@ function App() {
 
   return (
     <div className="App place-content-center h-screen">
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme='dark'
+        transition={Flip}
+        />
       <Header />
-      <GameContext.Provider value={{currentGuessIndex, setCurrentGuessIndex, tries, setTries, setInProgress}}>
+      <GameContext.Provider value={{ currentGuessIndex, setCurrentGuessIndex, tries, setTries, setInProgress }}>
         <div className='grid grid-cols-3'>
           <div className='col-span-3'>
             <Game />
           </div>
           <div className='col-span-3'>
-            <GameKeyboard />
+            {!inProgress ? <GameCompleteModal/> : <GameKeyboard />}
           </div>
         </div>
-      {!inProgress ? <ShareButton/> : null}
       </GameContext.Provider>
     </div>
   );
