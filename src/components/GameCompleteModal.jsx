@@ -1,10 +1,7 @@
-import React, { useContext } from 'react';
-import { GameContext } from './GameContext';
+import React from 'react';
 import ShareButton from './ShareButton';
 
 function GameCompleteModal() {
-    const { tries, currentGuessIndex } = useContext(GameContext);
-
     return (
         <div class="max-w-sm rounded overflow-hidden shadow-lg text-white max-w-screen-sm m-auto">
             <div class="px-6 py-4">

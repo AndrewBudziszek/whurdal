@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './components/Header'
 import Game from './components/Game'
 import GameKeyboard from './components/GameKeyboard';
-import ShareButton from './components/ShareButton';
 import { GameContext } from './components/GameContext';
 import { ToastContainer, Flip } from 'react-toastify';
 import './App.css';
