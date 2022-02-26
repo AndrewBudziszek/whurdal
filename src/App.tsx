@@ -7,13 +7,13 @@ import { GameContext } from './components/GameContext';
 
 
 function App() {
-  let [currentGuess, setCurrentGuess] = useState('     ');
-  let [tries, setTries] = useState(['     ', '     ', '     ', '     ', '     ']);
+  let [currentGuessIndex, setCurrentGuessIndex] = useState(0);
+  let [tries, setTries] = useState(['     ', '     ', '     ', '     ', '     ', '     ']);
 
   return (
     <div className="App place-content-center h-screen">
       <Header />
-      <GameContext.Provider value={{currentGuess, setCurrentGuess, tries, setTries}}>
+      <GameContext.Provider value={{currentGuessIndex, setCurrentGuessIndex, tries, setTries}}>
         <div className='grid grid-cols-3'>
           <div className='col-span-3'>
             <Game />
