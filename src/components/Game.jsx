@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { GameContext } from './GameContext';
 
 
@@ -14,7 +14,7 @@ function Game() {
                 {
                     tries.map((gameTry, j) => {
                         return (
-                            <div className="inline-grid grid-cols-5 gap-5 pb-2 place-items-center">
+                            <div key={j} className="inline-grid grid-cols-5 gap-5 pb-2 place-items-center">
                                 {
                                     gameTry.split('').map((letter, i) => {
                                         let tileClassName = absentBoxClassName;
@@ -25,7 +25,7 @@ function Game() {
                                             }
                                         }
                                         return (
-                                            <div className={tileClassName}>{letter}</div>
+                                            <div key={i} className={tileClassName}>{letter}</div>
                                         )
                                     })
                                 }

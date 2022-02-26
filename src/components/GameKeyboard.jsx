@@ -20,9 +20,10 @@ const display = {
 function GameKeyboard() {
   const keyboard = useRef();
   const { currentGuessIndex, setCurrentGuessIndex, tries, setTries } = useContext(GameContext);
+  let index = 0;
 
   function onChange(input) {
-    console.log('here', input, currentGuessIndex);
+    console.log('onChange Called', input, index, currentGuessIndex, tries);
     let cloneTries = [...tries];
 
     if (input.length <= 5) {
@@ -30,18 +31,21 @@ function GameKeyboard() {
         input += ' ';
       }
       cloneTries[currentGuessIndex] = input;
-      console.log('here', cloneTries)
       setTries(cloneTries);
     } else {
       keyboard.current.setInput(input.substr(0, 5))
+      cloneTries[currentGuessIndex] = input.substr(0, 5);
+      setTries(cloneTries);
     }
   }
 
   function onKeyPress(input) {
     if (input === '{ent}') {
       if (validGuess()) {
-        let nextIndex = currentGuessIndex + 1
-        setCurrentGuessIndex(nextIndex)
+        setCurrentGuessIndex(currentGuessIndex + 1)
+        keyboard.current.setInput('')
+        index++;
+        setTries(tries);
       } else {
         console.log('Submitted INVALID guess')
       }
@@ -49,7 +53,7 @@ function GameKeyboard() {
   }
 
   function validGuess() {
-    return !(tries[currentGuessIndex].replaceAll(' ', '').length != 5)
+    return tries[currentGuessIndex].replaceAll(' ', '').length === 5
   }
 
   return (
