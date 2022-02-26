@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { GameContext } from './GameContext';
-import { returnTodaysWord } from '../assets/wordList';
+import { getTodaysWord } from '../assets/wordList';
 
 
 function Game() {
     let { currentGuessIndex, tries } = useContext(GameContext)
-    let todaysWord = returnTodaysWord();
+    let todaysWord = getTodaysWord();
     let absentBoxClassName = 'inline-flex justify-center content-center border-2 border-gray-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
     let presentBoxClassName = 'inline-flex justify-center content-center border-2 border-yellow-700 bg-yellow-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
     let correctBoxClassName = 'inline-flex justify-center content-center border-2 border-green-700 bg-green-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';

@@ -1,3 +1,5 @@
+var luxon = require('luxon'); 
+
 const wordList = [
     'KNIFE',
     'YOUTH',
@@ -82,7 +84,10 @@ const wordList = [
     'ORDER',
 ];
 
-export function returnTodaysWord(offsetFromStartDate) {
-    const startDate = new Date('3/1/2022');
-    return wordList[0];
+export function getTodaysWord() {
+    const startDate = luxon.DateTime.fromISO("2022-02-26T12:00");
+    const daysSince = luxon.Interval.fromDateTimes(startDate, luxon.DateTime.now());
+    const daysSinceInt = parseInt(daysSince.length('days'));
+    
+    return wordList[daysSinceInt];
 }
