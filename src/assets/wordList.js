@@ -82,7 +82,7 @@ const wordList = [
     'ORDER',
 ];
 
-function returnTodaysWord(offsetFromStartDate) {
+export function returnTodaysWord(offsetFromStartDate) {
     const startDate = new Date('3/1/2022');
-
+    return wordList[0];
 }
