@@ -24,7 +24,6 @@ function GameKeyboard() {
   let index = 0;
 
   function onChange(input) {
-    console.log('onChange Called', input, index, currentGuessIndex, tries);
     let cloneTries = [...tries];
 
     if (input.length <= 5) {
