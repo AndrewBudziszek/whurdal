@@ -27,17 +27,22 @@ function generateShareSnippet(tries, currentGuessIndex) {
     let greenSquare = '🟩'
     let blackSquare = '⬛'
     let yellowSquare = '🟨';
+    let redSquare = '🟥';
     const todaysWord = getTodaysWord();
 
     for (let i = 0; i < currentGuessIndex; i++) {
         for (let j = 0; j < tries[i].length; j++) {
-            if (tries[i][j] === todaysWord[j]) {
-                shareSnippet += greenSquare;
-            } else if (todaysWord.includes(tries[i][j])) {
-                shareSnippet += yellowSquare;
+            if(tries.length > 6 && i === 5) {
+                shareSnippet += redSquare
             } else {
-                shareSnippet += blackSquare;
-            }
+                if (tries[i][j] === todaysWord[j]) {
+                    shareSnippet += greenSquare;
+                } else if (todaysWord.includes(tries[i][j])) {
+                    shareSnippet += yellowSquare;
+                } else {
+                    shareSnippet += blackSquare;
+                }
+            }   
         }
         shareSnippet += '\n';
     }

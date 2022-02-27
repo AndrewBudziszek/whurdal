@@ -4,9 +4,9 @@ import Game from './components/Game'
 import GameKeyboard from './components/GameKeyboard';
 import { GameContext } from './components/GameContext';
 import { ToastContainer, Flip } from 'react-toastify';
+import GameCompleteModal from './components/GameCompleteModal';
 import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
-import GameCompleteModal from './components/GameCompleteModal';
 
 
 

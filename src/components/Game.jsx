@@ -9,6 +9,7 @@ function Game() {
     let absentBoxClassName = 'inline-flex justify-center content-center border-2 border-gray-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
     let presentBoxClassName = 'inline-flex justify-center content-center border-2 border-yellow-700 bg-yellow-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
     let correctBoxClassName = 'inline-flex justify-center content-center border-2 border-green-700 bg-green-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
+    let gameOverFailedClassName = 'inline-flex justify-center content-center border-2 border-red-700 bg-red-700 h-16 w-16 uppercase text-white font-bold p-2 text-4xl';
     return (
         <>
             <div className="grid pt-5 place-items-center max-w-screen-lg m-auto">
@@ -24,6 +25,9 @@ function Game() {
                                             if(todaysWord[i] === letter) {
                                                 tileClassName = correctBoxClassName;
                                             }
+                                        }
+                                        if(j === 5 && tries.length > 6) {
+                                            tileClassName = gameOverFailedClassName;
                                         }
                                         return (
                                             <div key={i} className={tileClassName}>{letter}</div>
