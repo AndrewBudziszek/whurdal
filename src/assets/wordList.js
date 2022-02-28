@@ -93,5 +93,6 @@ export function getDaysSinceBeginning() {
 }
 
 export function getTodaysWord() {
-    return wordList[getDaysSinceBeginning()];
+    let daysSinceBeginning = getDaysSinceBeginning();
+    return wordList[daysSinceBeginning];
 }
