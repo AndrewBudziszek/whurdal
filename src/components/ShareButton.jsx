@@ -1,28 +1,31 @@
 import React, { useContext } from 'react';
 import { getTodaysWord, getDaysSinceBeginning } from '../assets/wordList';
 import { GameContext } from './GameContext';
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify';
+import ShareIcon from '@heroicons/react/outline/ShareIcon'
 
 
 function ShareButton() {
     const { tries, currentGuessIndex } = useContext(GameContext);
+    const buttonClassName = 'bg-green-700 hover:bg-green-900 text-white font-bold inline-flex items-center px-3 py-2 rounded text-2xl';
 
     return (
-        <div>
+        <div className='pb-6'>
             <button
-                className='bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded'
+                className={buttonClassName}
                 onClick={() => {
                     navigator.clipboard.writeText(generateShareSnippet(tries, currentGuessIndex));
                     toast('📋 Copied results to clipboard!')
                 }}
             >
-                Share
+                
+                Share <ShareIcon className='h-6 pl-1' />
             </button>
         </div>
     )
 }
 
-function generateShareSnippet(tries, currentGuessIndex) {    
+function generateShareSnippet(tries, currentGuessIndex) {
     let shareSnippet = `Whurdal ${getDaysSinceBeginning() + 1} ${currentGuessIndex}/6 \n\n`;
     let greenSquare = '🟩'
     let blackSquare = '⬛'
@@ -32,7 +35,7 @@ function generateShareSnippet(tries, currentGuessIndex) {
 
     for (let i = 0; i < currentGuessIndex; i++) {
         for (let j = 0; j < tries[i].length; j++) {
-            if(tries.length > 6 && i === 5) {
+            if (tries.length > 6 && i === 5) {
                 shareSnippet += redSquare
             } else {
                 if (tries[i][j] === todaysWord[j]) {
@@ -42,7 +45,7 @@ function generateShareSnippet(tries, currentGuessIndex) {
                 } else {
                     shareSnippet += blackSquare;
                 }
-            }   
+            }
         }
         shareSnippet += '\n';
     }

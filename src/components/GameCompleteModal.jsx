@@ -3,9 +3,9 @@ import ShareButton from './ShareButton';
 
 function GameCompleteModal() {
     return (
-        <div class="max-w-sm rounded overflow-hidden shadow-lg text-white max-w-screen-sm m-auto">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Statistics</div>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg text-white max-w-screen-sm m-auto border-2">
+            <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">Statistics</div>
                 <div className='grid grid-cols-4'>
                     <div>
                         <div>1</div>
@@ -24,9 +24,6 @@ function GameCompleteModal() {
                         <div>Max Streak</div>
                     </div>  
                 </div>
-            </div>
-            <div className=''>
-
             </div>
             <ShareButton />
         </div>

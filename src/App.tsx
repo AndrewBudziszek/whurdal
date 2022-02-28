@@ -16,7 +16,7 @@ function App() {
   let [inProgress, setInProgress] = useState(true);
 
   return (
-    <div className="App place-content-center h-screen">
+    <div className="App h-screen">
       <ToastContainer
         position="top-center"
         autoClose={2000}
@@ -26,7 +26,7 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme='dark'
+        theme='light'
         transition={Flip}
         />
       <Header />
