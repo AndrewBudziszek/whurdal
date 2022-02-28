@@ -25,12 +25,11 @@ let correctKeys = ""
 function GameKeyboard() {
   const keyboard = useRef();
   const { currentGuessIndex, setCurrentGuessIndex, tries, setTries, setInProgress } = useContext(GameContext);
-  let index = 0;
 
   function onChange(input) {
     let cloneTries = [...tries];
 
-    if(input.charAt(input.length - 1) != ' ') {
+    if(input.charAt(input.length - 1) !== ' ') {
       if (input.length <= 5) {
         while (input.length < 5) {
           input += ' ';
