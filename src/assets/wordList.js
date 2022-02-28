@@ -85,7 +85,7 @@ const wordList = [
 ];
 
 export function getDaysSinceBeginning() {
-    const startDate = luxon.DateTime.fromISO("2022-02-26T12:00");
+    const startDate = luxon.DateTime.fromISO("2022-02-26T00:00");
     const daysSince = luxon.Interval.fromDateTimes(startDate, luxon.DateTime.now());
     const daysSinceInt = parseInt(daysSince.length('days'));
 
