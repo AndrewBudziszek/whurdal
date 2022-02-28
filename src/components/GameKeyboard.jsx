@@ -57,7 +57,6 @@ function GameKeyboard() {
           updateKeys(tries[currentGuessIndex]);
           setCurrentGuessIndex(currentGuessIndex + 1)
           keyboard.current.setInput('')
-          index++;
           setTries(tries);
         }
       } else {
