@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { getTodaysWord, getDaysSinceBeginning, getTimeUntilTomorrow } from '../assets/wordList';
 import { GameContext } from './GameContext';
 import { toast } from 'react-toastify';
-import ShareIcon from '@heroicons/react/outline/ShareIcon'
+import ShareIcon from '@heroicons/react/outline/ShareIcon';
+import axios from 'axios';
 
 
 function ShareButton() {
@@ -31,11 +32,12 @@ function ShareButton() {
                     <button
                         className={buttonClassName}
                         onClick={() => {
+                            //Record share
+                            axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"shares"});  
                             navigator.clipboard.writeText(generateShareSnippet(tries, currentGuessIndex));
                             toast('📋 Copied results to clipboard!')
                         }}
                     >
-
                         Share <ShareIcon className='h-6 pl-1' />
                     </button>
                 </div>

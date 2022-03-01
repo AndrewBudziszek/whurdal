@@ -15,7 +15,6 @@ function Game() {
     let gameOverPresentClassName = baseClass + 'bg-yellow-700 border-red-700 border-4';
     let gameOverCorrectClassName = baseClass + 'bg-green-700 border-red-700 border-4'
 
-
     return (
         <>
             <div className="grid pt-5 place-items-center max-w-screen-lg m-auto">

@@ -4,6 +4,7 @@ import Keyboard from 'react-simple-keyboard';
 import { getTodaysWord, wordIsValid } from '../assets/wordList';
 import 'react-simple-keyboard/build/css/index.css';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const layout = {
   default:
@@ -50,14 +51,21 @@ function GameKeyboard() {
   function onKeyPress(input) {
     if (input === '{ent}') {
       if (validGuess()) {
+        axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"guesses"});  
         if(tries[currentGuessIndex] === getTodaysWord()) {
           setInProgress(false);
           setCurrentGuessIndex(currentGuessIndex + 1)
           toast('🎉 Terrific! 🎉')
+          //Record win
+          axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"wins"});  
           keyboard.current.destroy();
         } else {
           updateKeys(tries[currentGuessIndex]);
           setCurrentGuessIndex(currentGuessIndex + 1)
+          if(currentGuessIndex === 5) {
+            //Record Loss
+            axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"losses"});  
+          } 
           keyboard.current.setInput('')
           setTries(tries);
         }

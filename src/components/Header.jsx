@@ -1,11 +1,12 @@
 import React from 'react';
-import QuestionMarkCircleIcon from '@heroicons/react/outline/QuestionMarkCircleIcon'
-import CogIcon from '@heroicons/react/solid/CogIcon'
-import ChartBarIcon from '@heroicons/react/outline/ChartBarIcon'
+import QuestionMarkCircleIcon from '@heroicons/react/outline/QuestionMarkCircleIcon';
+import CogIcon from '@heroicons/react/solid/CogIcon';
+import ChartBarIcon from '@heroicons/react/outline/ChartBarIcon';
 
 function Header() {
     const buttonClassName = 'hover:text-gray-700'
     const iconClassName = 'h-6 w-10'
+
     return (
         <div className="place-items-center text-white">
             <div className="grid grid-cols-4 inline-flex items-center">
