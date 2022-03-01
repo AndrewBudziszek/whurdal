@@ -11,7 +11,10 @@ function GameCompleteModal() {
         const getWordInfo = async () => {
             try {
                 const response = await axios.get(baseUrl + getTodaysWord());
-                setWordInfo(response.data[0]);
+                setWordInfo({
+                    phonetic: response.data[0].phonetic,
+                    definition: response.data[0].meanings[0].definitions[0].definition
+                });
             } catch(error) {
                 console.error(error);
             }
@@ -25,8 +28,8 @@ function GameCompleteModal() {
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Whurd of the Day</div>
                 <div className='font-bold'>{getTodaysWord()}</div>
-                <div className='text-sm text-gray-500'>{wordInfo.phonetic}</div>
-                <div>{wordInfo.meanings[0].definitions[0].definition}</div>
+                <div className='italic text-sm text-gray-500'>{wordInfo.phonetic}</div>
+                <div>{wordInfo.definition}</div>
             </div>
             <ShareButton />
         </div>
