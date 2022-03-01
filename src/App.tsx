@@ -5,7 +5,6 @@ import GameKeyboard from './components/GameKeyboard';
 import { GameContext } from './components/GameContext';
 import { ToastContainer, Flip } from 'react-toastify';
 import GameCompleteModal from './components/GameCompleteModal';
-import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -16,7 +15,7 @@ function App() {
   let [inProgress, setInProgress] = useState(true);
 
   return (
-    <div className="App h-screen">
+    <div className="h-screen text-center">
       <ToastContainer
         position="top-center"
         autoClose={2000}

@@ -100,7 +100,8 @@ export function verifyWordsInList() {
 }
 
 export function wordIsValid(word) {
-    return sowpods.verify(word) || nonSowpodsAcceptedWords.includes(word);
+    word = word.toUpperCase();
+    return (sowpods.verify(word) || nonSowpodsAcceptedWords.includes(word)) && word.length === 5;
 }
 
 export function getDaysSinceBeginning() {
@@ -111,14 +112,14 @@ export function getDaysSinceBeginning() {
     return daysSinceInt;
 }
 
-export function getTodaysWord() {
-    let daysSinceBeginning = getDaysSinceBeginning();
-    return wordList[daysSinceBeginning];
-}
-
 export function getTimeUntilTomorrow() {
     let rightNow = luxon.DateTime.local();
     let tomorrow = luxon.DateTime.local().plus({days:1}).startOf('day');
 
     return tomorrow.diff(rightNow).toFormat('hh:mm:ss');
+}
+
+export function getTodaysWord() {
+    let daysSinceBeginning = getDaysSinceBeginning();
+    return wordList[daysSinceBeginning];
 }

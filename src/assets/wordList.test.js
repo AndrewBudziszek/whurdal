@@ -1,6 +1,5 @@
 var luxon = require('luxon'); 
-const { getDaysSinceBeginning, getTodaysWord, verifyWordsInList, getTimeUntilTomorrow } = require('./wordList');
-
+const { getDaysSinceBeginning, getTodaysWord, verifyWordsInList, getTimeUntilTomorrow, wordIsValid } = require('./wordList');
 
 describe('wordList Tests', () => {
     describe('getDaysSinceBeginning()', () => {
@@ -15,11 +14,36 @@ describe('wordList Tests', () => {
         });
     });
 
-    describe('check that wordlist is valid', () => {
+    describe('check that word list is valid', () => {
         it('no words are rejected', () => {
             let rejectedWords = verifyWordsInList();
 
             expect(rejectedWords.length).toBe(0);
-        })
+        });
     });
+
+    describe('wordIsValid', () => {
+        it('returns true for a valid word', () => {
+            expect(wordIsValid('union')).toBe(true);
+        });
+
+        it('returns false for a word that is longer than 5 characters', () => {
+            expect(wordIsValid('truthy')).toBe(false);
+        });
+
+        it('returns false for a word that is not real', () => {
+            expect(wordIsValid('tyapd')).toBe(false);
+        });
+
+        it('returns true for specially added words', () => {
+            expect(wordIsValid('chonk')).toBe(true);
+            expect(wordIsValid('GRATZ')).toBe(true);
+        });
+
+        it('returns false for words that are too short', () => {
+            expect(wordIsValid('that')).toBe(false);
+            expect(wordIsValid('to')).toBe(false);
+            expect(wordIsValid('cute')).toBe(false);
+        });
+    })
 })
