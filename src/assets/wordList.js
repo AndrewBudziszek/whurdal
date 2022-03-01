@@ -1,4 +1,5 @@
 var luxon = require('luxon'); 
+const sowpods = require('pf-sowpods');
 
 const wordList = [
     'KNIFE',
@@ -36,6 +37,7 @@ const wordList = [
     'NOISE',
     'DILDO',
     'BLOCK',
+    'APPLE',
     'WASTE',
     'THEME',
     'LIGHT',
@@ -84,9 +86,26 @@ const wordList = [
     'ORDER',
 ];
 
+let nonSowpodsAcceptedWords = ['CHONK', 'GRATZ'];
+
+export function verifyWordsInList() {
+    let rejectedWords = [];
+    for(let i = 0; i < wordList.length; i++) {
+        if((!sowpods.verify(wordList[i]) && !nonSowpodsAcceptedWords.includes(wordList[i])) || wordList[i].length != 5) {
+            rejectedWords.push(wordList[i])
+        }
+    }
+    
+    return rejectedWords;
+}
+
+export function wordIsValid(word) {
+    return sowpods.verify(word) || nonSowpodsAcceptedWords.includes(word);
+}
+
 export function getDaysSinceBeginning() {
-    const startDate = luxon.DateTime.fromISO("2022-02-26T00:00");
-    const daysSince = luxon.Interval.fromDateTimes(startDate, luxon.DateTime.now());
+    const startDate = luxon.DateTime.local(2022, 2, 26);
+    const daysSince = luxon.Interval.fromDateTimes(startDate, luxon.DateTime.local());
     const daysSinceInt = parseInt(daysSince.length('days'));
 
     return daysSinceInt;
@@ -95,4 +114,11 @@ export function getDaysSinceBeginning() {
 export function getTodaysWord() {
     let daysSinceBeginning = getDaysSinceBeginning();
     return wordList[daysSinceBeginning];
+}
+
+export function getTimeUntilTomorrow() {
+    let rightNow = luxon.DateTime.local();
+    let tomorrow = luxon.DateTime.local().plus({days:1}).startOf('day');
+
+    return tomorrow.diff(rightNow).toFormat('hh:mm:ss');
 }

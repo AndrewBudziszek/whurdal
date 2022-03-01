@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { getTodaysWord, getDaysSinceBeginning } from '../assets/wordList';
+import React, { useContext, useState, useEffect } from 'react';
+import { getTodaysWord, getDaysSinceBeginning, getTimeUntilTomorrow } from '../assets/wordList';
 import { GameContext } from './GameContext';
 import { toast } from 'react-toastify';
 import ShareIcon from '@heroicons/react/outline/ShareIcon'
@@ -8,6 +8,13 @@ import ShareIcon from '@heroicons/react/outline/ShareIcon'
 function ShareButton() {
     const { tries, currentGuessIndex } = useContext(GameContext);
     const buttonClassName = 'bg-green-700 hover:bg-green-900 text-white font-bold inline-flex items-center px-3 py-2 rounded text-2xl';
+    const [currentTimeRemaining, setCurrentTimeRemaining] = useState('65:44:33')
+
+    useEffect(() => {
+        let thing = setInterval(() => {
+            setCurrentTimeRemaining(getTimeUntilTomorrow());
+        }, 1000)        
+    }, [currentTimeRemaining]);
 
     return (
         <div className='pb-6'>
@@ -21,6 +28,12 @@ function ShareButton() {
                 
                 Share <ShareIcon className='h-6 pl-1' />
             </button>
+            <div className='uppercase font-bold text-2xl'>
+                Next Whurdal
+            </div>
+            <div className='uppercase text-4xl'>
+                {currentTimeRemaining}
+            </div>
         </div>
     )
 }

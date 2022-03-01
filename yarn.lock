@@ -6406,6 +6406,11 @@
   "resolved" "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz"
   "version" "2.1.0"
 
+"pf-sowpods@^1.2.1":
+  "integrity" "sha512-6B8dR2jlhYfXKSx5VVmlfDfXe4dGyK6ieWzVElgEvZVFXoq8pil0aq8K28kzbltoIa+Y26QGk0MhfJOdUli/Ww=="
+  "resolved" "https://registry.npmjs.org/pf-sowpods/-/pf-sowpods-1.2.1.tgz"
+  "version" "1.2.1"
+
 "picocolors@^0.2.1":
   "integrity" "sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA=="
   "resolved" "https://registry.npmjs.org/picocolors/-/picocolors-0.2.1.tgz"

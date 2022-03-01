@@ -1,8 +1,11 @@
 import React, { useContext, useRef } from 'react';
 import { GameContext } from './GameContext';
 import Keyboard from 'react-simple-keyboard';
-import { getTodaysWord } from '../assets/wordList';
+import { getTodaysWord, wordIsValid } from '../assets/wordList';
 import 'react-simple-keyboard/build/css/index.css';
+import { toast } from 'react-toastify';
+
+const sowpods = require('pf-sowpods')
 
 const layout = {
   default:
@@ -52,6 +55,7 @@ function GameKeyboard() {
         if(tries[currentGuessIndex] === getTodaysWord()) {
           setInProgress(false);
           setCurrentGuessIndex(currentGuessIndex + 1)
+          toast('🎉 Terrific! 🎉')
           keyboard.current.destroy();
         } else {
           updateKeys(tries[currentGuessIndex]);
@@ -66,6 +70,10 @@ function GameKeyboard() {
   }
 
   function validGuess() {
+    if(!wordIsValid(tries[currentGuessIndex])) {
+      toast('❌ Not in word list ❌');
+      return false;
+    }
     return tries[currentGuessIndex].replaceAll(' ', '').length === 5
   }
 

@@ -1,5 +1,6 @@
 var luxon = require('luxon'); 
-const { getDaysSinceBeginning, getTodaysWord } = require('./wordList');
+const { getDaysSinceBeginning, getTodaysWord, verifyWordsInList, getTimeUntilTomorrow } = require('./wordList');
+
 
 describe('wordList Tests', () => {
     describe('getDaysSinceBeginning()', () => {
@@ -12,5 +13,13 @@ describe('wordList Tests', () => {
     
             expect(daysSinceInt).toBe(daysSinceBeginning);
         });
-    })
+    });
+
+    describe('check that wordlist is valid', () => {
+        it('no words are rejected', () => {
+            let rejectedWords = verifyWordsInList();
+
+            expect(rejectedWords.length).toBe(0);
+        })
+    });
 })
