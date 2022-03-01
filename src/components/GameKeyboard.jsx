@@ -5,8 +5,6 @@ import { getTodaysWord, wordIsValid } from '../assets/wordList';
 import 'react-simple-keyboard/build/css/index.css';
 import { toast } from 'react-toastify';
 
-const sowpods = require('pf-sowpods')
-
 const layout = {
   default:
     [

@@ -8,10 +8,10 @@ import ShareIcon from '@heroicons/react/outline/ShareIcon'
 function ShareButton() {
     const { tries, currentGuessIndex } = useContext(GameContext);
     const buttonClassName = 'bg-green-700 hover:bg-green-900 text-white font-bold inline-flex items-center px-3 py-2 rounded text-2xl';
-    const [currentTimeRemaining, setCurrentTimeRemaining] = useState('65:44:33')
+    const [currentTimeRemaining, setCurrentTimeRemaining] = useState('00:00:00')
 
     useEffect(() => {
-        let thing = setInterval(() => {
+        setInterval(() => {
             setCurrentTimeRemaining(getTimeUntilTomorrow());
         }, 1000)        
     }, [currentTimeRemaining]);
