@@ -13,7 +13,7 @@ function Game() {
     let correctBoxClassName = baseClass + 'border-green-700 bg-green-700';
     let gameOverAbsentClassName = baseClass + 'bg-stone-700 border-red-700 border-4';
     let gameOverPresentClassName = baseClass + 'bg-yellow-700 border-red-700 border-4';
-    let gameOverCorrectClassName = baseClass + 'bg-green-700 border-red-700 border-4'
+    let gameOverCorrectClassName = baseClass + 'bg-green-700 border-red-700 border-4';
 
     return (
         <>

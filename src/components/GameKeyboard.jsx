@@ -55,6 +55,9 @@ function GameKeyboard() {
         if(tries[currentGuessIndex] === getTodaysWord()) {
           setInProgress(false);
           setCurrentGuessIndex(currentGuessIndex + 1)
+          localStorage.setItem('inProgress', false);
+          localStorage.setItem('tries', JSON.stringify(tries));
+          localStorage.setItem('currentGuessIndex', JSON.stringify(currentGuessIndex + 1));
           toast('🎉 Terrific! 🎉')
           //Record win
           axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"wins"});  
@@ -62,11 +65,13 @@ function GameKeyboard() {
         } else {
           updateKeys(tries[currentGuessIndex]);
           setCurrentGuessIndex(currentGuessIndex + 1)
+          localStorage.setItem('currentGuessIndex', JSON.stringify(currentGuessIndex + 1));
           if(currentGuessIndex === 5) {
             //Record Loss
             axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"losses"});  
           } 
           keyboard.current.setInput('')
+          localStorage.setItem('tries', JSON.stringify(tries));
           setTries(tries);
         }
       } else {
