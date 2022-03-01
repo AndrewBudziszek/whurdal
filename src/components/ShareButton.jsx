@@ -13,27 +13,37 @@ function ShareButton() {
     useEffect(() => {
         setInterval(() => {
             setCurrentTimeRemaining(getTimeUntilTomorrow());
-        }, 1000)        
+        }, 1000)
     }, [currentTimeRemaining]);
 
     return (
         <div className='pb-6'>
-            <button
-                className={buttonClassName}
-                onClick={() => {
-                    navigator.clipboard.writeText(generateShareSnippet(tries, currentGuessIndex));
-                    toast('📋 Copied results to clipboard!')
-                }}
-            >
+            <div className='grid grid-cols-2 inline-flex items-center'>
+                <div>
+                    <div className='uppercase font-bold text-2xl'>
+                        Next Whurdal
+                    </div>
+                    <div className='uppercase text-4xl'>
+                        {currentTimeRemaining}
+                    </div>
+                </div>
+                <div>
+                    <button
+                        className={buttonClassName}
+                        onClick={() => {
+                            navigator.clipboard.writeText(generateShareSnippet(tries, currentGuessIndex));
+                            toast('📋 Copied results to clipboard!')
+                        }}
+                    >
+
+                        Share <ShareIcon className='h-6 pl-1' />
+                    </button>
+                </div>
                 
-                Share <ShareIcon className='h-6 pl-1' />
-            </button>
-            <div className='uppercase font-bold text-2xl'>
-                Next Whurdal
+
             </div>
-            <div className='uppercase text-4xl'>
-                {currentTimeRemaining}
-            </div>
+
+
         </div>
     )
 }

@@ -7,8 +7,6 @@ import { ToastContainer, Flip } from 'react-toastify';
 import GameCompleteModal from './components/GameCompleteModal';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
 function App() {
   let [currentGuessIndex, setCurrentGuessIndex] = useState(0);
   let [tries, setTries] = useState(['     ', '     ', '     ', '     ', '     ', '     ']);
