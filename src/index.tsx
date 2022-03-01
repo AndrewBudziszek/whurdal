@@ -11,7 +11,7 @@ axios.defaults.headers.common = {
 axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"views"});   
 
 let localStorageWord = localStorage.getItem('todaysWord');
-if(JSON.parse(localStorageWord!) != getTodaysWord()) {
+if(JSON.parse(localStorageWord!) !== getTodaysWord()) {
   localStorage.removeItem('inProgress');
   localStorage.removeItem('tries');
   localStorage.removeItem('currentGuessIndex');
