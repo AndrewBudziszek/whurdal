@@ -8,9 +8,22 @@ import GameCompleteModal from './components/GameCompleteModal';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  let [currentGuessIndex, setCurrentGuessIndex] = useState(0);
-  let [tries, setTries] = useState(['     ', '     ', '     ', '     ', '     ', '     ']);
-  let [inProgress, setInProgress] = useState(true);
+  let [currentGuessIndex, setCurrentGuessIndex] = useState(() => {
+    const saved = localStorage.getItem('currentGuessIndex');
+    const value = JSON.parse(saved!);
+    return value || 0;
+  });
+  let [tries, setTries] = useState(() => {
+    const saved = localStorage.getItem('tries');
+    const value = JSON.parse(saved!);
+    return value || ['     ', '     ', '     ', '     ', '     ', '     '];
+  });
+  let [inProgress, setInProgress] = useState(() => {
+    const saved = localStorage.getItem('inProgress');
+    const value = JSON.parse(saved!);
+    if(value === null) return true;
+    return value === 'true';
+  });
 
   return (
     <div className="h-screen text-center">
