@@ -91,7 +91,7 @@ let nonSowpodsAcceptedWords = ['CHONK', 'GRATZ'];
 export function verifyWordsInList() {
     let rejectedWords = [];
     for(let i = 0; i < wordList.length; i++) {
-        if((!sowpods.verify(wordList[i]) && !nonSowpodsAcceptedWords.includes(wordList[i])) || wordList[i].length !== 5) {
+        if(!wordIsValid(wordList[i])) {
             rejectedWords.push(wordList[i])
         }
     }

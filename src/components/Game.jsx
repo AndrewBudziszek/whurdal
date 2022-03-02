@@ -4,16 +4,16 @@ import { getTodaysWord } from '../assets/wordList';
 
 
 function Game() {
-    let { currentGuessIndex, tries } = useContext(GameContext)
-    let todaysWord = getTodaysWord();
-    let baseClass = 'inline-flex justify-center content-center border-2 h-16 w-16 uppercase text-white font-bold p-2 text-4xl '
-    let currentClassName = baseClass + 'border-gray-700';
-    let absentBoxClassName = baseClass + 'border-stone-700 bg-stone-700';
-    let presentBoxClassName = baseClass + 'border-yellow-700 bg-yellow-700';
-    let correctBoxClassName = baseClass + 'border-green-700 bg-green-700';
-    let gameOverAbsentClassName = baseClass + 'bg-stone-700 border-red-700 border-4';
-    let gameOverPresentClassName = baseClass + 'bg-yellow-700 border-red-700 border-4';
-    let gameOverCorrectClassName = baseClass + 'bg-green-700 border-red-700 border-4';
+    const { currentGuessIndex, tries } = useContext(GameContext)
+    const todaysWord = getTodaysWord();
+    const baseClass = 'inline-flex justify-center content-center border-2 h-16 w-16 uppercase text-white font-bold p-2 text-4xl '
+    const currentClassName = baseClass + 'border-gray-700';
+    const absentBoxClassName = baseClass + 'border-stone-700 bg-stone-700';
+    const presentBoxClassName = baseClass + 'border-yellow-700 bg-yellow-700';
+    const correctBoxClassName = baseClass + 'border-green-700 bg-green-700';
+    const gameOverAbsentClassName = baseClass + 'bg-stone-700 border-red-700 border-4';
+    const gameOverPresentClassName = baseClass + 'bg-yellow-700 border-red-700 border-4';
+    const gameOverCorrectClassName = baseClass + 'bg-green-700 border-red-700 border-4';
 
     return (
         <>
