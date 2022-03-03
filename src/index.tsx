@@ -4,7 +4,7 @@ import App from './App';
 import axios from 'axios';
 import './index.css';
 
-if(false) {
+if(process.env.REACT_APP_WHURDAL_ENV !== 'dev') {
   console.log = () => {}
 }
 
