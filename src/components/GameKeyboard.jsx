@@ -26,7 +26,7 @@ let correctKeys = ""
 
 function GameKeyboard() {
   const keyboard = useRef();
-  const { currentGuessIndex, setCurrentGuessIndex, tries, setTries, setInProgress } = useContext(GameContext);
+  const { currentGuessIndex, updateCurrentGuessIndex, tries, setNewTries, toggleInProgress } = useContext(GameContext);
 
   function onChange(input) {
     let cloneTries = [...tries];
@@ -37,11 +37,11 @@ function GameKeyboard() {
           input += ' ';
         }
         cloneTries[currentGuessIndex] = input;
-        setTries(cloneTries);
+        setNewTries(cloneTries);
       } else {
         keyboard.current.setInput(input.substr(0, 5))
         cloneTries[currentGuessIndex] = input.substr(0, 5);
-        setTries(cloneTries);
+        setNewTries(cloneTries);
       }
     } else {
       keyboard.current.setInput(input.trim())
@@ -53,8 +53,8 @@ function GameKeyboard() {
       if (validGuess()) {
         axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"guesses"});  
         if(tries[currentGuessIndex] === getTodaysWord()) {
-          setInProgress(false);
-          setCurrentGuessIndex(currentGuessIndex + 1)
+          toggleInProgress(false);
+          updateCurrentGuessIndex(currentGuessIndex + 1)
           localStorage.setItem('inProgress', false);
           localStorage.setItem('tries', JSON.stringify(tries));
           localStorage.setItem('currentGuessIndex', JSON.stringify(currentGuessIndex + 1));
@@ -64,15 +64,15 @@ function GameKeyboard() {
           keyboard.current.destroy();
         } else {
           updateKeys(tries[currentGuessIndex]);
-          setCurrentGuessIndex(currentGuessIndex + 1)
+          updateCurrentGuessIndex(currentGuessIndex + 1)
           localStorage.setItem('currentGuessIndex', JSON.stringify(currentGuessIndex + 1));
-          if(currentGuessIndex === 5) {
+          if(updateCurrentGuessIndex === 5) {
             //Record Loss
             axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', {"lookupID":"losses"});  
           } 
           keyboard.current.setInput('')
           localStorage.setItem('tries', JSON.stringify(tries));
-          setTries(tries);
+          setNewTries(tries);
         }
       } else {
         console.log('Submitted INVALID guess')

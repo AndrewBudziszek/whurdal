@@ -50,7 +50,7 @@ function ShareButton() {
     )
 }
 
-function generateShareSnippet(tries, currentGuessIndex) {
+function generateShareSnippet(tries: string[], currentGuessIndex: number): string {
     let shareSnippet = `Whurdal ${getDaysSinceBeginning() + 1} ${currentGuessIndex}/6 \n\n`;
     let greenSquare = '🟩'
     let blackSquare = '⬛'
