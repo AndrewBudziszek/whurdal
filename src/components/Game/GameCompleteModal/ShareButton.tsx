@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { getTodaysWord, getDaysSinceBeginning, getTimeUntilTomorrow } from '../assets/wordList';
-import { GameContext } from './GameContext';
+import { getTodaysWord, getDaysSinceBeginning, getTimeUntilTomorrow } from '../../../assets/wordList';
+import { GameContext } from '../../GameContext';
 import { toast } from 'react-toastify';
 import ShareIcon from '@heroicons/react/outline/ShareIcon';
 import axios from 'axios';
@@ -50,7 +50,7 @@ function ShareButton() {
     )
 }
 
-function generateShareSnippet(tries, currentGuessIndex) {
+function generateShareSnippet(tries: string[], currentGuessIndex: number): string {
     let shareSnippet = `Whurdal ${getDaysSinceBeginning() + 1} ${currentGuessIndex}/6 \n\n`;
     let greenSquare = '🟩'
     let blackSquare = '⬛'

@@ -15,7 +15,6 @@ const wordList = [
     'FUDGE',
     'STICK',
     'WRONG',
-    'BITCH',
     'SHARP',
     'FAULT',
     'GRIFT',
@@ -84,13 +83,20 @@ const wordList = [
     'CHIEF',
     'WORLD',
     'ORDER',
+    'BITCH',
+    'SHANK',
 ];
 
 let nonSowpodsAcceptedWords = ['CHONK', 'GRATZ'];
 
 export function verifyWordsInList() {
     let rejectedWords = [];
+    let words = [];
     for(let i = 0; i < wordList.length; i++) {
+        if(words.includes(wordList[i])) {
+            rejectedWords.push(wordList[i] + ' DUPLICATE')
+        }
+        words.push(wordList[i])
         if(!wordIsValid(wordList[i])) {
             rejectedWords.push(wordList[i])
         }

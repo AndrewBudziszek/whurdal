@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import { getTodaysWord } from '../assets/wordList';
+import { getTodaysWord } from '../../../assets/wordList';
 import ShareButton from './ShareButton';
 
 function GameCompleteModal() {
@@ -24,7 +24,7 @@ function GameCompleteModal() {
     }, []);
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg text-white max-w-screen-sm m-auto border-2">
+        <div className="max-w-sm text-white m-auto">
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">Whurd of the Day</div>
                 <div className='font-bold'>{getTodaysWord()}</div>

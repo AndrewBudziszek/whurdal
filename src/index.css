@@ -44,4 +44,9 @@ code {
   cursor: default;
 }
 
+.hg-theme-default .hg-button {
+  border: none;
+  height: 45px;
+}
+
 
