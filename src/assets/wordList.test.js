@@ -18,7 +18,7 @@ describe('wordList Tests', () => {
         it('no words are rejected', () => {
             let rejectedWords = verifyWordsInList();
 
-            expect(rejectedWords.length).toBe(0);
+            expect(rejectedWords).toEqual([]);
         });
     });
 

@@ -3,7 +3,7 @@ import Header from './components/Header'
 import { ToastContainer, Flip } from 'react-toastify';
 import { GameContextProvider } from './components/GameContext';
 import 'react-toastify/dist/ReactToastify.css';
-import Game from './components/Game';
+import Game from './components/Game/Game';
 
 function App() {
 
