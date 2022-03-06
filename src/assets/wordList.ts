@@ -1,4 +1,4 @@
-var luxon = require('luxon');
+import { DateTime, Interval } from 'luxon';
 const sowpods = require('pf-sowpods');
 
 const wordList: string[] = [
@@ -113,16 +113,16 @@ export function wordIsValid(word: string): boolean {
 }
 
 export function getDaysSinceBeginning(): number {
-    const startDate = luxon.DateTime.local(2022, 2, 26);
-    const daysSince = luxon.Interval.fromDateTimes(startDate, luxon.DateTime.local());
-    const daysSinceInt = parseInt(daysSince.length('days'));
+    const startDate = DateTime.local(2022, 2, 26);
+    const daysSince = Interval.fromDateTimes(startDate, DateTime.local());
+    const daysSinceInt = daysSince.length('days');
 
-    return daysSinceInt;
+    return Math.floor(daysSinceInt);
 }
 
-export function getTimeUntilTomorrow(): Date {
-    let rightNow = luxon.DateTime.local();
-    let tomorrow = luxon.DateTime.local().plus({ days: 1 }).startOf('day');
+export function getTimeUntilTomorrow(): string {
+    let rightNow = DateTime.local();
+    let tomorrow = DateTime.local().plus({ days: 1 }).startOf('day');
 
     return tomorrow.diff(rightNow).toFormat('hh:mm:ss');
 }
