@@ -56,7 +56,6 @@ function GameKeyboard() {
         if (tries[currentGuessIndex] === getTodaysWord()) {
           completeGame();
         } else {
-          updateKeys(tries[currentGuessIndex]);
           updateCurrentGuessIndex(currentGuessIndex + 1)
           localStorage.setItem('currentGuessIndex', JSON.stringify(currentGuessIndex + 1));
           if (currentGuessIndex === 5) {

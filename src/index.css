@@ -31,7 +31,7 @@ code {
   }
 
   .simple-keyboard.myTheme1 .hg-button {
-    @apply bg-gray-600 text-white
+    @apply bg-gray-600 text-white border-none
   }
 }
 
@@ -48,5 +48,3 @@ code {
   border: none;
   height: 45px;
 }
-
-

@@ -7,7 +7,7 @@ module.exports = {
       gap: {
         '5': '5px'
       }
-    }   ,
+    },
   },
   plugins: [],
 }

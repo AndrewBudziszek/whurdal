@@ -1,9 +1,9 @@
 import { lazy, useContext, Suspense } from 'react';
 import { GameContext } from '../GameContext';
 import GameTiles from './GameTiles';
-import GameKeyboard from './GameKeyboard';
 
 const GameCompleteModal = lazy(() => import('./GameCompleteModal/GameCompleteModal'));
+const GameKeyboard = lazy(() => import('./GameKeyboard'));
 
 function Game() {
   const { inProgress } = useContext(GameContext);
@@ -21,7 +21,12 @@ function Game() {
                 <GameCompleteModal />
               </Suspense>
             </>
-            : <GameKeyboard />}
+            :
+            <>
+              <Suspense fallback={<>Loading...</>}>
+                <GameKeyboard />
+              </Suspense>
+            </>}
         </div>
       </div>
     </>
