@@ -85,6 +85,7 @@ const wordList = [
     'ORDER',
     'BITCH',
     'SHANK',
+    'VALOR',
 ];
 
 let nonSowpodsAcceptedWords = ['CHONK', 'GRATZ'];
