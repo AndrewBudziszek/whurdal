@@ -1,5 +1,5 @@
 import { DateTime, Interval } from 'luxon';
-const sowpods = require('pf-sowpods');
+import { verify } from 'whurdal-word-verifier';
 
 const wordList: string[] = [
     'KNIFE',
@@ -109,7 +109,7 @@ export function verifyWordsInList(): string[] | null {
 
 export function wordIsValid(word: string): boolean {
     word = word.toUpperCase();
-    return (sowpods.verify(word) || nonSowpodsAcceptedWords.includes(word)) && word.length === 5;
+    return (verify(word) || nonSowpodsAcceptedWords.includes(word)) && word.length === 5;
 }
 
 export function getDaysSinceBeginning(): number {
