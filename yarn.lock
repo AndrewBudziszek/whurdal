@@ -8738,10 +8738,10 @@
   dependencies:
     "isexe" "^2.0.0"
 
-"whurdal-word-verifier@^1.0.7":
-  "integrity" "sha512-oZTVwftFEUZva17C2613nILYwJhyItjSmMa7NMTUfKu/vwRYBN3jWJU1Qfl+JDo9oSlfwWjqr80CfCFyVvrXvg=="
-  "resolved" "https://registry.npmjs.org/whurdal-word-verifier/-/whurdal-word-verifier-1.0.7.tgz"
-  "version" "1.0.7"
+"whurdal-word-verifier@^1.0.9":
+  "integrity" "sha512-gVN0qq8qmKJE/PnIpRNXwWKO0gmoD9Ex5zQi6YnWJf8sLJHQhl+MY2hyngPzRcz/ouF/No3gBU3QvmzZUXpG6w=="
+  "resolved" "https://registry.npmjs.org/whurdal-word-verifier/-/whurdal-word-verifier-1.0.9.tgz"
+  "version" "1.0.9"
 
 "word-wrap@^1.2.3", "word-wrap@~1.2.3":
   "integrity" "sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ=="
