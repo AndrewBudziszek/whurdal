@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { getTodaysWord, getDaysSinceBeginning, getTimeUntilTomorrow } from '../../../assets/wordList';
 import { GameContext } from '../../GameContext';
 import { toast } from 'react-toastify';
@@ -18,7 +18,7 @@ function ShareButton() {
     }, [currentTimeRemaining]);
 
     return (
-        <div className='pb-6'>
+        <>
             <div className='grid grid-cols-2 inline-flex items-center'>
                 <div>
                     <div className='uppercase font-bold text-2xl'>
@@ -41,12 +41,8 @@ function ShareButton() {
                         Share <ShareIcon className='h-6 pl-1' />
                     </button>
                 </div>
-                
-
             </div>
-
-
-        </div>
+        </>
     )
 }
 

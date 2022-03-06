@@ -1,5 +1,5 @@
+import { useState, useEffect } from 'react';
 import axios from 'axios';
-import React, {useState, useEffect} from 'react';
 import { getTodaysWord } from '../../../assets/wordList';
 import ShareButton from './ShareButton';
 
@@ -15,7 +15,7 @@ function GameCompleteModal() {
                     phonetic: response.data[0].phonetic,
                     definition: response.data[0].meanings[0].definitions[0].definition
                 });
-            } catch(error) {
+            } catch (error) {
                 console.error(error);
             }
         }

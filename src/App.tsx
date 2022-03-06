@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Game from './components/Game/Game';
 
 function App() {
-
   return (
     <div className="h-screen text-center">
         <ToastContainer

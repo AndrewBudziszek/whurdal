@@ -1,8 +1,7 @@
-import React from 'react';
 import QuestionMarkCircleIcon from '@heroicons/react/outline/QuestionMarkCircleIcon';
 import CogIcon from '@heroicons/react/solid/CogIcon';
 
-function Header() {
+export default function Header() {
     const buttonClassName = 'hover:text-gray-700'
     const iconClassName = 'h-5 w-9 sm:h-8 sm:w-11'
 
@@ -27,5 +26,3 @@ function Header() {
         </div>
     )
 }
-
-export default Header;

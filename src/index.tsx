@@ -4,16 +4,14 @@ import App from './App';
 import axios from 'axios';
 import './index.css';
 
-if(process.env.REACT_APP_WHURDAL_ENV !== 'dev') {
-  console.log = () => {}
-}
-
 axios.defaults.headers.common = {
   "X-API-Key": `${process.env.REACT_APP_WHURDAL_API_KEY}`,
 };
-axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "views" });
 
-
+if(process.env.REACT_APP_WHURDAL_ENV !== 'dev') {
+  console.log = () => {}
+  axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "views" });
+}
 
 ReactDOM.render(
   <React.StrictMode>

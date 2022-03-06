@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from 'react';
+import { useContext, useRef, useEffect } from 'react';
 import { GameContext } from '../GameContext';
 import { getTodaysWord, wordIsValid } from '../../assets/wordList';
 import { toast } from 'react-toastify';
@@ -35,18 +35,15 @@ function GameKeyboard() {
 
   function onChange(input) {
     let cloneTries = [...tries];
+
     if (input.charAt(input.length - 1) !== ' ') {
-      if (input.length <= 5) {
-        while (input.length < 5) {
-          input += ' ';
-        }
-        cloneTries[currentGuessIndex] = input;
-        setNewTries(cloneTries);
-      } else {
-        keyboard.current.setInput(input.substr(0, 5))
-        cloneTries[currentGuessIndex] = input.substr(0, 5);
-        setNewTries(cloneTries);
+      while (input.length < 5) {
+        input += ' ';
       }
+
+      if(input.length > 5) keyboard.current.setInput(input.substr(0, 5));
+      cloneTries[currentGuessIndex] = input.substr(0, 5);
+      setNewTries(cloneTries);
     } else {
       keyboard.current.setInput(input.trim())
     }
@@ -98,15 +95,16 @@ function GameKeyboard() {
   }
 
   function updateKeys() {
-    console.log('Updating keys');
+    console.log('Updating keys...');
+    const todaysWord = getTodaysWord();
     for (var word = 0; word < currentGuessIndex; word++) {
       let input = tries[word];
       for (let i = 0; i < input.length; i++) {
         if (!`${absentKeys} ${correctKeys}`.includes(input[i])) {
           presentKeys.replace(input[i], '');
-          if (input[i] === getTodaysWord()[i]) {
+          if (input[i] === todaysWord[i]) {
             correctKeys += input[i] + ' ';
-          } else if (getTodaysWord().includes(input[i])) {
+          } else if (todaysWord.includes(input[i])) {
             presentKeys += input[i] + ' ';
           } else {
             absentKeys += input[i] + ' ';
