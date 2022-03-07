@@ -12,7 +12,7 @@ const wordList: string[] = [
     'INDEX',
     'BRAVO',
     'MAGIC',
-    'CLASH',
+    'PEACH',
     'FUDGE',
     'STICK',
     'WRONG',
