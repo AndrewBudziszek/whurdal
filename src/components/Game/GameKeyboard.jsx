@@ -29,7 +29,7 @@ function GameKeyboard() {
   const { currentGuessIndex, updateCurrentGuessIndex, tries, setNewTries, toggleInProgress } = useContext(GameContext);
 
   useEffect(() => {
-    // Setup Keyboard
+    // Setup Digital Keyboard
     updateKeys();
   });
 
@@ -127,6 +127,7 @@ function GameKeyboard() {
         mergeDisplay={true}
         onChange={e => onChange(e)}
         onKeyPress={e => onKeyPress(e)}
+        physicalKeyboardHighlightPress={true}
         buttonAttributes={
           [
             {

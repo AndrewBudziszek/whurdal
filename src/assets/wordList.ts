@@ -1,5 +1,6 @@
 import { DateTime, Interval } from 'luxon';
 import { verify } from 'whurdal-word-verifier';
+import dictionary from 'whurdal-word-verifier/lib';
 
 const wordList: string[] = [
     'KNIFE',
@@ -11,7 +12,7 @@ const wordList: string[] = [
     'INDEX',
     'BRAVO',
     'MAGIC',
-    'PEACH',
+    'CLASH',
     'FUDGE',
     'STICK',
     'WRONG',
@@ -63,7 +64,6 @@ const wordList: string[] = [
     'DRAFT',
     'RAISE',
     'FRESH',
-    'ERROR',
     'RAPID',
     'GRATZ',
     'VAGUE',
@@ -97,6 +97,13 @@ export function verifyWordsInList(): string[] | null {
     for (let i = 0; i < wordList.length; i++) {
         if (words.includes(wordList[i])) {
             rejectedWords.push(wordList[i] + ' DUPLICATE')
+        }
+        // Reject any words with 3 dupe letters
+        for(const letter of wordList[i]) {
+            if(wordList[i].split(letter).length > 3) {
+                rejectedWords.push(wordList[i]);
+                break;
+            }
         }
         words.push(wordList[i])
         if (!wordIsValid(wordList[i])) {

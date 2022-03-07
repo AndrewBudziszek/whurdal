@@ -31,7 +31,7 @@ function GameTiles() {
                                     if (currentGuessIndex > 0 && tryIndex < currentGuessIndex) {
                                         if (todaysWord[i] === letter) {
                                             tileClassName = correctBoxClassName;
-                                        } else if (todaysWord.includes(letter)) {
+                                        } else if (todaysWord.includes(letter) && gameTry.substring(0, i).split(letter).length - 1 < todaysWord.split(letter).length - 1) {
                                             tileClassName = presentBoxClassName;
                                         } else {
                                             tileClassName = absentBoxClassName;
