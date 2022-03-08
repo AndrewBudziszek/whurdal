@@ -24,12 +24,8 @@ function GameTiles() {
                         }
                     }
                     let lettersRemaining = todaysWord;
-                    var lettersToRemove = [];
                     for(var k = 0; k < todaysWord.length; k++) {
-                        if(todaysWord[k] === gameTry[k]) lettersToRemove.push(todaysWord[k]);
-                    }
-                    for(var p = 0; p < lettersToRemove.length; p++) {
-                        lettersRemaining = lettersRemaining.replace(lettersToRemove[p], '');
+                        if(todaysWord[k] === gameTry[k]) lettersRemaining.replace(todaysWord[k], '')
                     }
                     return (
                         <div key={tryIndex} className="inline-grid grid-cols-5 gap-5 pb-2 place-items-center">
