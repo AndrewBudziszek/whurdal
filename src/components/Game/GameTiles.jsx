@@ -40,7 +40,6 @@ function GameTiles() {
                                     if (currentGuessIndex > 0 && tryIndex < currentGuessIndex) {
                                         if (todaysWord[i] === letter) {
                                             tileClassName = gameOverRow ? gameOverCorrectClassName : correctBoxClassName;
-                                            lettersRemaining = lettersRemaining.replace(letter, '');
                                         } else if (todaysWord.includes(letter)) {
                                             if(!lettersRemaining.includes(letter)) {
                                                 tileClassName = gameOverRow ? gameOverAbsentClassName: absentBoxClassName;
