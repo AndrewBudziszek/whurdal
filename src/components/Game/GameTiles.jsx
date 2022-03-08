@@ -18,14 +18,14 @@ function GameTiles() {
         <div className="grid pt-5 place-items-center m-auto">
             {
                 tries.map((gameTry, tryIndex) => {
-                    if(!inProgress) {
-                        if(gameTry.replaceAll(' ', '').length === 0) {
+                    if (!inProgress) {
+                        if (gameTry.replaceAll(' ', '').length === 0) {
                             return null;
                         }
                     }
                     let lettersRemaining = todaysWord;
-                    for(var k = 0; k < todaysWord.length; k++) {
-                        if(todaysWord[k] === gameTry[k]) lettersRemaining.replace(todaysWord[k], '')
+                    for (var k = 0; k < todaysWord.length; k++) {
+                        if (todaysWord[k] === gameTry[k]) lettersRemaining.replace(todaysWord[k], '')
                     }
                     return (
                         <div key={tryIndex} className="inline-grid grid-cols-5 gap-5 pb-2 place-items-center">
@@ -37,14 +37,14 @@ function GameTiles() {
                                         if (todaysWord[i] === letter) {
                                             tileClassName = gameOverRow ? gameOverCorrectClassName : correctBoxClassName;
                                         } else if (todaysWord.includes(letter)) {
-                                            if(!lettersRemaining.includes(letter)) {
-                                                tileClassName = gameOverRow ? gameOverAbsentClassName: absentBoxClassName;
+                                            if (!lettersRemaining.includes(letter)) {
+                                                tileClassName = gameOverRow ? gameOverAbsentClassName : absentBoxClassName;
                                             } else {
                                                 tileClassName = gameOverRow ? gameOverPresentClassName : presentBoxClassName;
                                                 lettersRemaining = lettersRemaining.replace(letter, '');
                                             }
                                         } else {
-                                            tileClassName = gameOverRow ? gameOverAbsentClassName: absentBoxClassName;
+                                            tileClassName = gameOverRow ? gameOverAbsentClassName : absentBoxClassName;
                                         }
                                     }
                                     return (
