@@ -23,27 +23,33 @@ function GameTiles() {
                             return null;
                         }
                     }
+                    let lettersRemaining = todaysWord;
+                    var lettersToRemove = [];
+                    for(var k = 0; k < todaysWord.length; k++) {
+                        if(todaysWord[k] === gameTry[k]) lettersToRemove.push(todaysWord[k]);
+                    }
+                    for(var p = 0; p < lettersToRemove.length; p++) {
+                        lettersRemaining = lettersRemaining.replace(lettersToRemove[p], '');
+                    }
                     return (
                         <div key={tryIndex} className="inline-grid grid-cols-5 gap-5 pb-2 place-items-center">
                             {
                                 gameTry.split('').map((letter, i) => {
                                     let tileClassName = currentClassName;
+                                    let gameOverRow = tryIndex === 5 && tries.length > 6;
                                     if (currentGuessIndex > 0 && tryIndex < currentGuessIndex) {
                                         if (todaysWord[i] === letter) {
-                                            tileClassName = correctBoxClassName;
-                                        } else if (todaysWord.includes(letter) && gameTry.substring(0, i).split(letter).length - 1 < todaysWord.split(letter).length - 1) {
-                                            tileClassName = presentBoxClassName;
-                                        } else {
-                                            tileClassName = absentBoxClassName;
-                                        }
-                                    }
-                                    if (tryIndex === 5 && tries.length > 6) {
-                                        if (todaysWord[i] === letter) {
-                                            tileClassName = gameOverCorrectClassName;
+                                            tileClassName = gameOverRow ? gameOverCorrectClassName : correctBoxClassName;
+                                            lettersRemaining = lettersRemaining.replace(letter, '');
                                         } else if (todaysWord.includes(letter)) {
-                                            tileClassName = gameOverPresentClassName;
+                                            if(!lettersRemaining.includes(letter)) {
+                                                tileClassName = gameOverRow ? gameOverAbsentClassName: absentBoxClassName;
+                                            } else {
+                                                tileClassName = gameOverRow ? gameOverPresentClassName : presentBoxClassName;
+                                                lettersRemaining = lettersRemaining.replace(letter, '');
+                                            }
                                         } else {
-                                            tileClassName = gameOverAbsentClassName;
+                                            tileClassName = gameOverRow ? gameOverAbsentClassName: absentBoxClassName;
                                         }
                                     }
                                     return (

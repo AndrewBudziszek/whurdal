@@ -33,7 +33,7 @@ function GameKeyboard() {
     updateKeys();
   });
 
-  function onChange(input) {
+  const onChange = (input) => {
     let cloneTries = [...tries];
 
     if (input.charAt(input.length - 1) !== ' ') {
@@ -49,7 +49,7 @@ function GameKeyboard() {
     }
   }
 
-  function onKeyPress(input) {
+  const onKeyPress = (input) => {
     if (input === '{ent}') {
       if (validGuess(tries[currentGuessIndex])) {
         axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "guesses" });
@@ -125,9 +125,10 @@ function GameKeyboard() {
         layout={layout}
         display={display}
         mergeDisplay={true}
-        onChange={e => onChange(e)}
-        onKeyPress={e => onKeyPress(e)}
+        onChange={onChange}
+        onKeyPress={onKeyPress}
         physicalKeyboardHighlightPress={true}
+        physicalKeyboardHighlight={true}
         buttonAttributes={
           [
             {

@@ -1,6 +1,5 @@
 import { DateTime, Interval } from 'luxon';
 import { verify } from 'whurdal-word-verifier';
-import dictionary from 'whurdal-word-verifier/lib';
 
 const wordList: string[] = [
     'KNIFE',
@@ -86,7 +85,8 @@ const wordList: string[] = [
     'BITCH',
     'SHANK',
     'VALOR',
-    'POINT'
+    'POINT',
+    'FARCE'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
