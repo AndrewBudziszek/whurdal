@@ -7,16 +7,15 @@ import axios from 'axios';
 import 'react-simple-keyboard/build/css/index.css';
 
 const layout = {
-  default:
-    [
-      "Q W E R T Y U I O P",
-      "{space} A S D F G H J K L {space}",
-      "{ent} Z X C V B N M {backspace}",
-    ]
+  default: [
+    "q w e r t y u i o p",
+    "{space} a s d f g h j k l {space}",
+    "{enter} z x c v b n m {backspace}",
+  ],
 };
 
 const display = {
-  "{ent}": "enter",
+  "{enter}": "enter",
   "{backspace}": "⌫ bs",
 };
 
@@ -41,16 +40,16 @@ function GameKeyboard() {
         input += ' ';
       }
 
-      if(input.length > 5) keyboard.current.setInput(input.substr(0, 5));
-      cloneTries[currentGuessIndex] = input.substr(0, 5);
+      if (input.length > 5) keyboard.current.setInput(input.substr(0, 5));
+      cloneTries[currentGuessIndex] = input.substr(0, 5).toUpperCase();
       setNewTries(cloneTries);
     } else {
-      keyboard.current.setInput(input.trim())
+      keyboard.current.setInput(input.trim().toUpperCase())
     }
   }
 
   const onKeyPress = (input) => {
-    if (input === '{ent}') {
+    if (input === '{enter}') {
       if (validGuess(tries[currentGuessIndex])) {
         axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "guesses" });
         if (tries[currentGuessIndex] === getTodaysWord()) {
