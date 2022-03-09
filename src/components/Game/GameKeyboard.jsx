@@ -94,9 +94,9 @@ function GameKeyboard() {
 
   function updateKeys() {
     console.log('Updating keys...');
-    const todaysWord = getTodaysWord();
+    const todaysWord = getTodaysWord().toLocaleLowerCase();
     for (var word = 0; word < currentGuessIndex; word++) {
-      let input = tries[word];
+      let input = tries[word].toLowerCase();
       for (let i = 0; i < input.length; i++) {
         if (!`${absentKeys} ${correctKeys}`.includes(input[i])) {
           presentKeys.replace(input[i], '');
