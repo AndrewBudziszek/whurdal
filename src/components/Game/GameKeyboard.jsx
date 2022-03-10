@@ -60,10 +60,16 @@ function GameKeyboard() {
           if (currentGuessIndex === 5) {
             //Record Loss
             axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "losses" });
+            
           }
-          keyboard.current.setInput('')
-          localStorage.setItem('tries', JSON.stringify(tries));
-          setNewTries(tries);
+
+          let cloneTries = [...tries];
+          if(currentGuessIndex >= 5) {
+            cloneTries.push('     ');
+          }
+          keyboard.current.setInput('')          
+          localStorage.setItem('tries', JSON.stringify(cloneTries));
+          setNewTries(cloneTries);
         }
       }
     }
