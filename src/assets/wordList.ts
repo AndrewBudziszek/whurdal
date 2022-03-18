@@ -86,7 +86,11 @@ const wordList: string[] = [
     'SHANK',
     'VALOR',
     'POINT',
-    'FARCE'
+    'FARCE',
+    'SPIRE',
+    'TOWER',
+    'GUSTO',
+    'MOIST'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
