@@ -30,6 +30,7 @@ const wordList: string[] = [
     'SUGAR',
     'FORTE',
     'SPANK',
+    'VIRUS',
     'DELTA',
     'MUSIC',
     'CHEWY',
