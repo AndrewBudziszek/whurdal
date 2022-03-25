@@ -34,7 +34,6 @@ const wordList: string[] = [
     'MUSIC',
     'CHEWY',
     'NOISE',
-    'DILDO',
     'BLOCK',
     'APPLE',
     'WASTE',
@@ -64,7 +63,6 @@ const wordList: string[] = [
     'RAISE',
     'FRESH',
     'RAPID',
-    'GRATZ',
     'VAGUE',
     'POUND',
     'AWFUL',
@@ -82,7 +80,6 @@ const wordList: string[] = [
     'CHIEF',
     'WORLD',
     'ORDER',
-    'BITCH',
     'SHANK',
     'VALOR',
     'POINT',
@@ -90,7 +87,8 @@ const wordList: string[] = [
     'SPIRE',
     'TOWER',
     'GUSTO',
-    'MOIST'
+    'MOIST',
+    'CRANE'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
