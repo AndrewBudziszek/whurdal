@@ -102,7 +102,8 @@ const wordList: string[] = [
     'CABLE',
     'PRINT',
     'MONEY',
-    'FIBER'
+    'FIBER',
+    'BIDET'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
