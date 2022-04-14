@@ -93,6 +93,7 @@ const wordList: string[] = [
     'GUSTO',
     'MOIST',
     'CRANE',
+    'SPIKE',
     'LEARN',
     'CHOIR',
     'XEROX',
@@ -102,8 +103,17 @@ const wordList: string[] = [
     'CABLE',
     'PRINT',
     'MONEY',
+    'BIDET',
+    'SPINE',
+    'GIRTH',
     'FIBER',
-    'BIDET'
+    'SMART',
+    'GHAST',
+    'TOTAL',
+    'ULTRA',
+    'POISE',
+    'BUILD',
+    'GROIN'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
