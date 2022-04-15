@@ -113,7 +113,8 @@ const wordList: string[] = [
     'ULTRA',
     'POISE',
     'BUILD',
-    'GROIN'
+    'GROIN',
+    'SCONE'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
