@@ -100,6 +100,7 @@ const wordList: string[] = [
     'QUANT',
     'MANOR',
     'EMAIL',
+    'SERVE',
     'CABLE',
     'PRINT',
     'MONEY',
