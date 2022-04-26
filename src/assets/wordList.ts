@@ -102,6 +102,7 @@ const wordList: string[] = [
     'EMAIL',
     'SERVE',
     'CABLE',
+    'STEAM',
     'PRINT',
     'MONEY',
     'BIDET',
@@ -115,7 +116,11 @@ const wordList: string[] = [
     'POISE',
     'BUILD',
     'GROIN',
-    'SCONE'
+    'SCONE',
+    'INEPT',
+    'FIRST',
+    'HYPER',
+    'GOURD'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
