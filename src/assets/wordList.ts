@@ -120,7 +120,8 @@ const wordList: string[] = [
     'INEPT',
     'FIRST',
     'HYPER',
-    'GOURD'
+    'GOURD',
+    'QUERY',
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
