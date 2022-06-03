@@ -120,8 +120,23 @@ const wordList: string[] = [
     'INEPT',
     'FIRST',
     'HYPER',
+    'CHORE',
+    'SHINE',
+    'MONTH',
     'GOURD',
     'QUERY',
+    'EMOTE',
+    'CLOSE',
+    'SLICE',
+    'INLAY',
+    'SHORT',
+    'CHIME', 
+    'APART',
+    'STORY',
+    'DEPTH',
+    'TODAY',
+    'HEART',
+    'WATCH'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
