@@ -136,7 +136,8 @@ const wordList: string[] = [
     'DEPTH',
     'TODAY',
     'HEART',
-    'WATCH'
+    'WATCH',
+    'PHASE'
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
