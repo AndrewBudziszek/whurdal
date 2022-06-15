@@ -10,11 +10,19 @@ function GameCompleteModal() {
         const baseUrl = 'https://api.dictionaryapi.dev/api/v2/entries/en/'
         const getWordInfo = async () => {
             try {
-                const response = await axios.get(baseUrl + getTodaysWord());
-                setWordInfo({
-                    phonetic: response.data[0].phonetic,
-                    definition: response.data[0].meanings[0].definitions[0].definition
-                });
+                if(getTodaysWord() === 'FRUNK') {
+                    setWordInfo({
+                        phonetic: '/frəNGk/',
+                        definition: 'A trunk (boot, storage compartment) located at the front rather than the rear of a car. Most commonly in Electric Vehicles'
+                    })
+                } else {
+                    const response = await axios.get(baseUrl + getTodaysWord());
+                    setWordInfo({
+                        phonetic: response.data[0].phonetic,
+                        definition: response.data[0].meanings[0].definitions[0].definition
+                    });
+                }
+                
             } catch (error) {
                 console.error(error);
             }
