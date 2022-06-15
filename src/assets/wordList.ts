@@ -127,6 +127,7 @@ const wordList: string[] = [
     'QUERY',
     'EMOTE',
     'CLOSE',
+    'MOVIE',
     'SLICE',
     'INLAY',
     'SHORT',
@@ -136,8 +137,10 @@ const wordList: string[] = [
     'DEPTH',
     'TODAY',
     'HEART',
+    'MORPH',
     'WATCH',
-    'PHASE'
+    'PHASE',
+    'MOLAR',
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ'];
