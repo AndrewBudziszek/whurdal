@@ -244,6 +244,7 @@ const wordList: string[] = [
     'GUIDE',
     'MAJOR',
     'STERN',
+    'LOVER',
     'BLIND',
     'CHORD',
     'ALARM',
