@@ -238,6 +238,7 @@ const wordList: string[] = [
     'INTRO',
     'SCALE',
     'MOLAR',
+    'RETRO',
     'CRUST',
     'RANGE',
     'FRUNK',
