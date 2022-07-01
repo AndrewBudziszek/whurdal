@@ -257,7 +257,8 @@ const wordList: string[] = [
     'FUGUE',
     'THEFT',
     'SCREW',
-    'QUARK'
+    'QUARK',
+    'PINOT',
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO'];
