@@ -16,17 +16,14 @@ function Game() {
         </div>
         <div className='col-span-3'>
           {!inProgress ?
-            <>
-              <Suspense fallback={<>Loading...</>}>
-                <GameCompleteModal />
-              </Suspense>
-            </>
+            <Suspense fallback={<>Loading...</>}>
+              <GameCompleteModal />
+            </Suspense>
             :
-            <>
-              <Suspense fallback={<>Loading...</>}>
-                <GameKeyboard />
-              </Suspense>
-            </>}
+            <Suspense fallback={<>Loading...</>}>
+              <GameKeyboard />
+            </Suspense>
+          }
         </div>
       </div>
     </>

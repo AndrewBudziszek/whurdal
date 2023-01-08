@@ -24,7 +24,7 @@ function GameTiles() {
                         }
                     }
                     let lettersRemaining = todaysWord;
-                    for (var k = 0; k < todaysWord.length; k++) {
+                    for (let k = 0; k < todaysWord.length; k++) {
                         if (todaysWord[k] === gameTry[k]) lettersRemaining = lettersRemaining.replace(todaysWord[k], '');
                     }
                     return (
@@ -32,7 +32,8 @@ function GameTiles() {
                             {
                                 gameTry.split('').map((letter, i) => {
                                     let tileClassName = currentClassName;
-                                    let gameOverRow = tryIndex === 5 && tries.length > 6;
+                                    const gameOverRow = tryIndex === 5 && tries.length > 6;
+
                                     if (currentGuessIndex > 0 && tryIndex < currentGuessIndex) {
                                         if (todaysWord[i] === letter) {
                                             tileClassName = gameOverRow ? gameOverCorrectClassName : correctBoxClassName;

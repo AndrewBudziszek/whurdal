@@ -48,10 +48,10 @@ function ShareButton() {
 
 function generateShareSnippet(tries: string[], currentGuessIndex: number): string {
     let shareSnippet = `Whurdal ${getDaysSinceBeginning() + 1} ${currentGuessIndex}/6 \n\n`;
-    let greenSquare = '🟩'
-    let blackSquare = '⬛'
-    let yellowSquare = '🟨';
-    let redSquare = '🟥';
+    const greenSquare = '🟩'
+    const blackSquare = '⬛'
+    const yellowSquare = '🟨';
+    const redSquare = '🟥';
     const todaysWord = getTodaysWord();
 
     for (let i = 0; i < currentGuessIndex; i++) {

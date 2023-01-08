@@ -1,7 +1,7 @@
 import { createContext, useState, FC } from "react";
 import { getLocalStorageItem } from '../util/local-storage-util';
 
-interface GameContextInterface {
+type GameContextInterface = {
     currentGuessIndex: number;
     tries: string[];
     inProgress: boolean;

@@ -33,7 +33,7 @@ function GameKeyboard() {
   });
 
   const onChange = (input) => {
-    let cloneTries = [...tries];
+    const cloneTries = [...tries];
 
     if (input.charAt(input.length - 1) !== ' ') {
       while (input.length < 5) {
@@ -58,12 +58,11 @@ function GameKeyboard() {
           updateCurrentGuessIndex(currentGuessIndex + 1)
           localStorage.setItem('currentGuessIndex', JSON.stringify(currentGuessIndex + 1));
           if (currentGuessIndex === 5) {
-            //Record Loss
             axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "losses" });
             
           }
 
-          let cloneTries = [...tries];
+          const cloneTries = [...tries];
           if(currentGuessIndex >= 5) {
             cloneTries.push('     ');
           }
@@ -83,7 +82,7 @@ function GameKeyboard() {
     localStorage.setItem('tries', JSON.stringify(tries));
     axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "wins" });
     keyboard.current.destroy();
-    toast('🎉 Terrific! 🎉');
+    toast(getCompletedMessage());
   }
 
   function validGuess(word) {
@@ -96,6 +95,18 @@ function GameKeyboard() {
     }
 
     return true;
+  }
+
+  function getCompletedMessage() {
+    if(currentGuessIndex < 1) {
+      return '🎉 Terrific! 🎉'
+    } else if (currentGuessIndex >= 1 && currentGuessIndex < 5) {
+      return '🎉 Nice one! 🎉'
+    } else if (currentGuessIndex === 5) {
+      return '😅 Phew! 😅'
+    } else {
+      return '😥 Sheesh. 😥'
+    }
   }
 
   function updateKeys() {

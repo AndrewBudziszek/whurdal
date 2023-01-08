@@ -181,7 +181,7 @@ const wordList: string[] = [
     'STAFF',
     'JOULE',
     'CHIME',
-    'TONIC', 
+    'TONIC',
     'PHOTO',
     'APART',
     'MESON',
@@ -475,15 +475,15 @@ const wordList: string[] = [
 
 ];
 
-let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO'];
+const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO'];
 
-export function verifyWordsInList(): string[] | null {
+export function verifyWordsInList(): string[] {
     let rejectedWords: string[] = [];
     let words: string[] = [];
     for (let i = 0; i < wordList.length; i++) {
         const word = wordList[i];
 
-        if(word.length > 5) { 
+        if (word.length > 5) {
             rejectedWords.push(word + ' TOO LONG'); break;
         }
         if (words.includes(word)) {
@@ -491,8 +491,8 @@ export function verifyWordsInList(): string[] | null {
             break;
         }
         // Reject any words with 3 dupe letters
-        for(const letter of word) {
-            if(word.split(letter).length > 3) {
+        for (const letter of word) {
+            if (word.split(letter).length > 3) {
                 rejectedWords.push(word + ' REPEATING LETTERS');
                 break;
             }
@@ -506,6 +506,22 @@ export function verifyWordsInList(): string[] | null {
     }
 
     return rejectedWords;
+}
+
+export type Definition = {
+    phonetic: string,
+    definition: string
+}
+
+export function getNonSowpodsDefinition(word: string): Definition | null {
+    if (word === 'FRUNK') {
+        return {
+            phonetic: '/frəNGk/',
+            definition: 'A trunk (boot, storage compartment) located at the front rather than the rear of a car. Most commonly in Electric Vehicles.'
+        }
+    }
+
+    return null;
 }
 
 export function wordIsValid(word: string): boolean {
