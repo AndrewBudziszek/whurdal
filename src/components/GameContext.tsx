@@ -12,7 +12,7 @@ interface GameContextInterface {
 
 const defaultState: GameContextInterface = {
     currentGuessIndex: getLocalStorageItem('currentGuessIndex') || 0,
-    tries: getLocalStorageItem('tries') || ['     ', '     ', '     ', '     ', '     ', '     '],
+    tries: getLocalStorageItem('tries') || Array.from({length: 6}).map(x => '     '),
     inProgress: getInProgressFromLocalStorage(),
 }
 
@@ -24,9 +24,9 @@ function getInProgressFromLocalStorage(): boolean {
 export const GameContext = createContext<GameContextInterface>(defaultState);
 
 export const GameContextProvider: FC = ({ children }) => {
-    let [currentGuessIndex, setCurrentGuessIndex] = useState<number>(defaultState.currentGuessIndex);
-    let [tries, setTries] = useState<string[]>(defaultState.tries);
-    let [inProgress, setInProgress] = useState<boolean>(defaultState.inProgress);
+    const [currentGuessIndex, setCurrentGuessIndex] = useState<number>(defaultState.currentGuessIndex);
+    const [tries, setTries] = useState<string[]>(defaultState.tries);
+    const [inProgress, setInProgress] = useState<boolean>(defaultState.inProgress);
 
     const updateCurrentGuessIndex = (currentGuessIndex: number) => {
         setCurrentGuessIndex(currentGuessIndex);
