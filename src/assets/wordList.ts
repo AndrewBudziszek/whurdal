@@ -424,24 +424,55 @@ const wordList: string[] = [
     'NYMPH',
     'DILDO',
     'SMELT',
+    'PLUCK',
+    'SLOSH',
     'RUPEE',
+    'VALID',
+    'SNARL',
+    'TAPER',
     'OXIDE',
     'ASKEW',
     'OLIVE',
     'MINCE',
     'COMMA',
+    'TWANG',
+    'ROOMY',
     'FORAY',
     'SNOUT',
+    'ZESTY',
+    'WOKEN',
     'BAYOU',
     'TIARA',
     'SCOUR',
+    'BLAND',
     'GECKO',
+    'ROYAL',
     'YIELD',
     'DELVE',
     'TIPSY',
     'CANNY',
     'BADGE',
-    'HAIRY'
+    'HAIRY',
+    'OPERA',
+    'UPEND',
+    'LATHE',
+    'KHAKI',
+    'MOURN',
+    'CYCLE',
+    'SLUSH',
+    'LEMON',
+    'BLUFF',
+    'GAMER',
+    'HOARD',
+    'FLUME',
+    'SHRUG',
+    'KEBAB',
+    'BUGGY',
+    'GOUGE',
+    'HOWDY',
+    'REPAY',
+    'BOOZY',
+
 ];
 
 let nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO'];
@@ -450,20 +481,28 @@ export function verifyWordsInList(): string[] | null {
     let rejectedWords: string[] = [];
     let words: string[] = [];
     for (let i = 0; i < wordList.length; i++) {
-        if (words.includes(wordList[i])) {
-            rejectedWords.push(wordList[i] + ' DUPLICATE')
+        const word = wordList[i];
+
+        if(word.length > 5) { 
+            rejectedWords.push(word + ' TOO LONG'); break;
+        }
+        if (words.includes(word)) {
+            rejectedWords.push(word + ' DUPLICATE')
+            break;
         }
         // Reject any words with 3 dupe letters
-        for(const letter of wordList[i]) {
-            if(wordList[i].split(letter).length > 3) {
-                rejectedWords.push(wordList[i]);
+        for(const letter of word) {
+            if(word.split(letter).length > 3) {
+                rejectedWords.push(word + ' REPEATING LETTERS');
                 break;
             }
         }
-        words.push(wordList[i])
-        if (!wordIsValid(wordList[i])) {
-            rejectedWords.push(wordList[i])
+        if (!wordIsValid(word)) {
+            rejectedWords.push(word + ' NOT IN DICTIONARY')
+            break;
         }
+
+        words.push(word)
     }
 
     return rejectedWords;
