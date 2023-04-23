@@ -1,10 +1,15 @@
 # Whurdal
-A Wordle clone.
+A Wordle clone. 
 
-# Usage
-`npm i`
+Deployed on Vercel.
 
-`npm start`
+## Usage
+`yarn`
+
+`yarn start`
 
 Open `localhost:3000` in a browser
+
+`yarn test` to run tests and verify word list
+
 
