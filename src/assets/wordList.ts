@@ -540,6 +540,7 @@ const wordList: string[] = [
     'SEDAN',
     'CYNIC',
     'BEGIN',
+    'SKIMP',
     'FOGGY',
     'STRIP',
     'MOUNT',
@@ -551,6 +552,7 @@ const wordList: string[] = [
     'BORAX',
     'GLEAM',
     'SWELT',
+    'RAMEN',
     'LOFTY',
     'CACHE',
     'TRUSS',
@@ -564,6 +566,7 @@ const wordList: string[] = [
     'EXULT',
     'LEAFY',
     'FLORA',
+    'PINTO',
     'AORTA',
     'DWELT',
     'DITTO',
@@ -572,17 +575,38 @@ const wordList: string[] = [
     'SPURT',
     'CARAT',
     'WALTZ',
+    'ZELDA',
+    'HUMID',
     'DROLL',
     'IMPEL',
     'BESET',
     'NATAL',
     'STAID',
+    'GRIME',
     'TOXIC',
     'PERKY',
     'HUMOR',
+    'JAZZY',
+    'SHRUB',
+    'PLAZA',
+    'REACT',
+    'CATER',
+    'ALTER',
+    'GRIEF',
+    'CHARM',
+    'FRACK',
+    'ENEMA',
+    'CHUTE',
+    'SWIRL',
+    'PROVE',
+    'REBUS',
+    'IGLOO',
+    'BRISK',
+    'DUCHY',
+    'HUMPH'
 ];
 
-const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO'];
+const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA'];
 
 export function verifyWordsInList(): string[] {
     let rejectedWords: string[] = [];
