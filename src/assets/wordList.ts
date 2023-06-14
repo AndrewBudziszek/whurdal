@@ -592,6 +592,7 @@ const wordList: string[] = [
   'SHRUB',
   'PLAZA',
   'REACT',
+  'BASED',
   'CATER',
   'ALTER',
   'GRIEF',
