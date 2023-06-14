@@ -634,7 +634,7 @@ export function verifyWordsInList(): string[] {
     // Reject any words with 3 dupe letters
     for (const letter of word) {
       if (word.split(letter).length > 3) {
-        rejectedWords.push(word + ' REPEATING LETTERS');
+        rejectedWords.push(word + ' 3 OF SAME LETTERS');
         break;
       }
     }
