@@ -480,7 +480,7 @@ const wordList: string[] = [
   'KEBAB',
   'BUGGY',
   'FLIRT',
-  'GOUGE',
+  'GOUGE', // TODAY'S WORD
   'HOWDY',
   'CREDO',
   'AVAIL',
@@ -529,6 +529,7 @@ const wordList: string[] = [
   'GLOAT',
   'UNFED',
   'WACKY',
+  'STOOL',
   'FLOSS',
   'QUALM',
   'GAMMA',
@@ -585,6 +586,7 @@ const wordList: string[] = [
   'STAID',
   'GRIME',
   'TOXIC',
+  'SPOOL',
   'PERKY',
   'CRAZE',
   'HUMOR',
@@ -594,12 +596,14 @@ const wordList: string[] = [
   'REACT',
   'BASED',
   'CATER',
+  'KAZOO',
   'ALTER',
   'GRIEF',
   'SHINY',
   'CHARM',
   'FRACK',
   'ENEMA',
+  'STRAP',
   'CHUTE',
   'SWIRL',
   'PROVE',
@@ -610,14 +614,20 @@ const wordList: string[] = [
   'HUMPH',
   'CLEAN',
   'PLUME',
+  'RANCH',
   'BLAZE',
   'SPUNK',
   'WHARF',
   'CRIME',
   'STAIN',
+  'BLOAT',
+  'PANKO',
+  'SHYLY',
+  'VOUGE',
+  'BOUGE',
 ];
 
-const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA'];
+const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -656,14 +666,40 @@ export type Definition = {
 }
 
 export function getNonSowpodsDefinition(word: string): Definition | null {
-  if (word === 'FRUNK') {
-    return {
-      phonetic: '/frəNGk/',
-      definition: 'A trunk (boot, storage compartment) located at the front rather than the rear of a car. Most commonly in Electric Vehicles.'
-    }
+  switch (word) {
+    case 'CHONK':
+      return {
+        phonetic: '/CHäNGk/',
+        definition: 'An unusually large cat.'
+      }
+    case 'GRATZ':
+      return {
+        phonetic: '/ɡræts/',
+        definition: 'Congratulations.'
+      }
+    case 'FRUNK':
+      return {
+        phonetic: '/frəNGk/',
+        definition: 'A trunk (boot, storage compartment) located at the front rather than the rear of a car. Most commonly in Electric Vehicles.',
+      }
+    case 'PROTO':
+      return {
+        phonetic: '/ˈprōdō/',
+        definition: 'A prototype.'
+      }
+    case 'ZELDA':
+      return {
+        phonetic: '/ˈzeldə/',
+        definition: 'A video game series created by Nintendo.'
+      }
+    case 'PANKO':
+      return {
+        phonetic: '/ˈpäNGkō/',
+        definition: 'A type of breadcrumb.'
+      }
+    default:
+      return null;
   }
-
-  return null;
 }
 
 export function wordIsValid(word: string): boolean {
