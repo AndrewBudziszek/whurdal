@@ -480,9 +480,9 @@ const wordList: string[] = [
   'KEBAB',
   'BUGGY',
   'FLIRT',
-  'GOUGE', // TODAY'S WORD
+  'GOUGE',
   'HOWDY',
-  'CREDO',
+  'CREDO', // 6/21/2023
   'AVAIL',
   'UNZIP',
   'OTTER',
@@ -591,6 +591,7 @@ const wordList: string[] = [
   'SPOOL',
   'PERKY',
   'CRAZE',
+  'RACER',
   'HUMOR',
   'JAZZY',
   'SHRUB',
@@ -598,6 +599,7 @@ const wordList: string[] = [
   'REACT',
   'CRAVE',
   'BASED',
+  'SPARK',
   'CATER',
   'KAZOO',
   'ALTER',
@@ -616,6 +618,8 @@ const wordList: string[] = [
   'DUCHY',
   'HUMPH',
   'CLEAN',
+  'PLUMB',
+  'TIGER',
   'PLUME',
   'CRATE',
   'RANCH',
@@ -629,6 +633,8 @@ const wordList: string[] = [
   'SHYLY',
   'VOUGE',
   'BOUGE',
+  'SHARK',
+
 ];
 
 const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO'];
