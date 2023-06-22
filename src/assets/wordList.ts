@@ -483,9 +483,9 @@ const wordList: string[] = [
   'GOUGE',
   'HOWDY',
   'CREDO', // 6/21/2023
-  'AVAIL',
-  'UNZIP',
-  'OTTER',
+  'AVAIL', // 6/22/2023
+  'UNZIP', // 6/23/2023
+  'OTTER', // 6/24/2023
   'CURRY',
   'WHINE',
   'CLAIM',
@@ -584,6 +584,7 @@ const wordList: string[] = [
   'DROLL',
   'IMPEL',
   'BESET',
+  'PANTS',
   'NATAL',
   'STAID',
   'GRIME',
@@ -605,6 +606,7 @@ const wordList: string[] = [
   'ALTER',
   'GRIEF',
   'SHINY',
+  'PASTE',
   'CHARM',
   'FRACK',
   'ENEMA',
@@ -616,7 +618,9 @@ const wordList: string[] = [
   'IGLOO',
   'BRISK',
   'DUCHY',
+  'BASTE',
   'HUMPH',
+  'QUAIL',
   'CLEAN',
   'PLUMB',
   'TIGER',
@@ -625,16 +629,20 @@ const wordList: string[] = [
   'RANCH',
   'BLAZE',
   'SPUNK',
+  'DOWDY',
   'WHARF',
   'CRIME',
   'STAIN',
+  'HASTE',
+  'CHASM',
   'BLOAT',
+  'EXILE',
+  'GRAIL',
   'PANKO',
   'SHYLY',
   'VOUGE',
   'BOUGE',
   'SHARK',
-
 ];
 
 const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO'];
