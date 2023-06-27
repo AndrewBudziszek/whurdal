@@ -638,6 +638,7 @@ const wordList: string[] = [
   'HASTE',
   'CHASM',
   'BLOAT',
+  'PLACE',
   'WIPER',
   'JOUST',
   'EXILE',
@@ -648,6 +649,8 @@ const wordList: string[] = [
   'VOUGE',
   'BOUGE',
   'SHARK',
+  'PANTY',
+  'ABORT',
 ];
 
 const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO'];
