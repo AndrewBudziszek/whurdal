@@ -661,7 +661,8 @@ const wordList: string[] = [
   'FENCE',
   'PLATE',
   'BOARD',
-  'SPECS'
+  'SPECS',
+  'PENAL'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
