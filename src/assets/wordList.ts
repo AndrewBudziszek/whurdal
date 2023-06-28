@@ -637,6 +637,7 @@ const wordList: string[] = [
   'STAIN',
   'HASTE',
   'CHASM',
+  'KIRBY',
   'BLOAT',
   'PLACE',
   'WIPER',
@@ -651,9 +652,19 @@ const wordList: string[] = [
   'SHARK',
   'PANTY',
   'ABORT',
+  'GLAMP',
+  'TRACT',
+  'STENT',
+  'FLAMY',
+  'ENSUE',
+  'OCCUR',
+  'FENCE',
+  'PLATE',
+  'BOARD',
+  'SPECS'
 ];
 
-const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO'];
+export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -722,6 +733,16 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈpäNGkō/',
         definition: 'A type of breadcrumb.'
+      }
+    case 'GLAMP':
+      return {
+        phonetic: '/ɡlamp/',
+        definition: 'Glamorous camping.'
+      }
+    case 'KIRBY':
+      return {
+        phonetic: '/ˈkərbē/',
+        definition: 'A pink puffball character from the Nintendo video game series of the same name.'
       }
     default:
       return null;
