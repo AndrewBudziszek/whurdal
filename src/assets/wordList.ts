@@ -643,6 +643,7 @@ const wordList: string[] = [
   'WIPER',
   'JOUST',
   'EXILE',
+  'FLIER',
   'GRAIL',
   'PANKO',
   'GUEST',
@@ -652,6 +653,7 @@ const wordList: string[] = [
   'SHARK',
   'PANTY',
   'ABORT',
+  'DINER',
   'GLAMP',
   'TRACT',
   'STENT',
@@ -662,7 +664,8 @@ const wordList: string[] = [
   'PLATE',
   'BOARD',
   'SPECS',
-  'PENAL'
+  'PENAL',
+  'MINER'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
