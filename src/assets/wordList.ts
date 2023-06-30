@@ -491,7 +491,7 @@ const wordList: string[] = [
   'CLAIM',
   'FLAIL',
   'REPAY',
-  'STONE',
+  'STONE', // 6/30/2023
   'CREEK',
   'ADMIN',
   'DALLE',
