@@ -640,6 +640,7 @@ const wordList: string[] = [
   'KIRBY',
   'BLOAT',
   'PLACE',
+  'STRAW',
   'WIPER',
   'JOUST',
   'EXILE',
@@ -655,6 +656,7 @@ const wordList: string[] = [
   'ABORT',
   'DINER',
   'GLAMP',
+  'STRAY',
   'TRACT',
   'STENT',
   'FLAMY',
@@ -665,7 +667,9 @@ const wordList: string[] = [
   'BOARD',
   'SPECS',
   'PENAL',
-  'MINER'
+  'MINER',
+  'OZONE',
+  'STARK'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
