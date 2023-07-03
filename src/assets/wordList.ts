@@ -557,6 +557,7 @@ const wordList: string[] = [
   'RAMEN',
   'LOFTY',
   'CACHE',
+  'MOTEL',
   'TRUSS',
   'UNTIE',
   'INPUT',
@@ -672,7 +673,9 @@ const wordList: string[] = [
   'STARK',
   'FLUNK',
   'ANTIC',
-  'MOSSY'
+  'MOSSY',
+  'POTED',
+  'HOTEL'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
