@@ -680,7 +680,9 @@ const wordList: string[] = [
   'HOTEL',
   'VENOM',
   'NAVEL',
+  'SIEGE',
   'RIVER',
+  'FRANC'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
