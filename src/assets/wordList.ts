@@ -664,6 +664,7 @@ const wordList: string[] = [
   'ENSUE',
   'OCCUR',
   'FENCE',
+  'VISOR',
   'PLATE',
   'BOARD',
   'SPECS',
@@ -672,10 +673,14 @@ const wordList: string[] = [
   'OZONE',
   'STARK',
   'FLUNK',
+  'DIVER',
   'ANTIC',
   'MOSSY',
   'POTED',
-  'HOTEL'
+  'HOTEL',
+  'VENOM',
+  'NAVEL',
+  'RIVER',
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
