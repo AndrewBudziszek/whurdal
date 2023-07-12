@@ -503,7 +503,7 @@ const wordList: string[] = [
   'PINKY',
   'FOUND',
   'EPOXY',
-  'GRAPH',
+  'GRAPH', // 7/12/2023
   'SALSA',
   'DEBUG',
   'PRICK',
@@ -637,6 +637,7 @@ const wordList: string[] = [
   'CRIME',
   'STAIN',
   'HASTE',
+  'BRASH',
   'CHASM',
   'KIRBY',
   'BLOAT',
@@ -663,6 +664,7 @@ const wordList: string[] = [
   'FLAMY',
   'ENSUE',
   'OCCUR',
+  'CHIRL',
   'FENCE',
   'VISOR',
   'PLATE',
@@ -674,6 +676,7 @@ const wordList: string[] = [
   'STARK',
   'FLUNK',
   'DIVER',
+  'SHORE',
   'ANTIC',
   'MOSSY',
   'POTED',
@@ -682,10 +685,12 @@ const wordList: string[] = [
   'NAVEL',
   'SIEGE',
   'RIVER',
-  'FRANC'
+  'FRANC',
+  'SHREK',
+  'WHIRL',
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP'];
+export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -764,6 +769,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈkərbē/',
         definition: 'A pink puffball character from the Nintendo video game series of the same name.'
+      }
+    case 'SHREK':
+      return {
+        phonetic: '/SHrek/',
+        definition: 'A fictional ogre character created by American author William Steig.'
       }
     default:
       return null;
