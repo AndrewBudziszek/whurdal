@@ -688,6 +688,8 @@ const wordList: string[] = [
   'FRANC',
   'SHREK',
   'WHIRL',
+  'SALAD',
+  'BARGE'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
