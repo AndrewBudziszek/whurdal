@@ -684,12 +684,18 @@ const wordList: string[] = [
   'VENOM',
   'NAVEL',
   'SIEGE',
+  'FIEND',
   'RIVER',
   'FRANC',
   'SHREK',
   'WHIRL',
+  'VALET',
   'SALAD',
-  'BARGE'
+  'BARGE',
+  'CHARD',
+  'FOLKY',
+  'DUVET',
+  'SPEAR'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
