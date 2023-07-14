@@ -695,7 +695,8 @@ const wordList: string[] = [
   'CHARD',
   'FOLKY',
   'DUVET',
-  'SPEAR'
+  'SPEAR',
+  'ERROR'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
@@ -712,13 +713,6 @@ export function verifyWordsInList(): string[] {
     if (words.includes(word)) {
       rejectedWords.push(word + ' DUPLICATE')
       break;
-    }
-    // Reject any words with 3 dupe letters
-    for (const letter of word) {
-      if (word.split(letter).length > 3) {
-        rejectedWords.push(word + ' 3 OF SAME LETTERS');
-        break;
-      }
     }
     if (!wordIsValid(word)) {
       rejectedWords.push(word + ' NOT IN DICTIONARY')
