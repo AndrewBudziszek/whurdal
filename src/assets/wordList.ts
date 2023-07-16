@@ -696,7 +696,10 @@ const wordList: string[] = [
   'FOLKY',
   'DUVET',
   'SPEAR',
-  'ERROR'
+  'ERROR',
+  'TOPAZ',
+  'BASTI',
+  'TWIST'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
