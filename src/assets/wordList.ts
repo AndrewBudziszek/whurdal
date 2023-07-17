@@ -507,7 +507,7 @@ const wordList: string[] = [
   'SALSA',
   'DEBUG',
   'PRICK',
-  'WRUNG',
+  'WRUNG', // 7/16/2023
   'APRON',
   'HUTCH',
   'SNAFU',
@@ -690,6 +690,7 @@ const wordList: string[] = [
   'SHREK',
   'WHIRL',
   'VALET',
+  'DROOP',
   'SALAD',
   'BARGE',
   'CHARD',
@@ -699,7 +700,12 @@ const wordList: string[] = [
   'ERROR',
   'TOPAZ',
   'BASTI',
-  'TWIST'
+  'TWIST',
+  'PORNO',
+  'WRANG',
+  'NORMA',
+  'MILKY',
+  'POLAR'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
