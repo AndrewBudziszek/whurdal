@@ -780,7 +780,7 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
     case 'KIRBY':
       return {
         phonetic: '/ˈkərbē/',
-        definition: 'A pink puffball character from the Nintendo video game series of the same name.'
+        definition: 'A pink puffball character from the Nintendo video game series "Kirby".'
       }
     case 'SHREK':
       return {
