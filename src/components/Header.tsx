@@ -14,7 +14,7 @@ export default function Header() {
           </button>
         </div>
         <div className='text-4xl font-bold col-span-2 title align-center py-2'>
-          HI KATIE
+          Whurdal
         </div>
         <div className='header-right align-center flex justify-end'>
           <button className={buttonClassName}>
