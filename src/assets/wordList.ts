@@ -697,6 +697,7 @@ const wordList: string[] = [
   'FOLKY',
   'DUVET',
   'SPEAR',
+  'BURLY',
   'ERROR',
   'TOPAZ',
   'BASTI',
@@ -706,7 +707,8 @@ const wordList: string[] = [
   'NORMA',
   'MILKY',
   'POLAR',
-  'FLANK'
+  'FLANK',
+  'CHURL',
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
