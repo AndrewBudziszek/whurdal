@@ -512,7 +512,7 @@ const wordList: string[] = [
   'HUTCH',
   'SNAFU',
   'PANIC',
-  'ATONE',
+  'ATONE', // 7/21/2023
   'DEITY',
   'FROCK',
   'YACHT',
