@@ -709,9 +709,13 @@ const wordList: string[] = [
   'POLAR',
   'FLANK',
   'CHURL',
+  'SKUNK',
+  'DOGGY',
+  'FRAME',
+  'SHART'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK'];
+export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -788,6 +792,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/SHrek/',
         definition: 'A fictional ogre character created by American author William Steig.'
+      }
+    case 'SHART':
+      return {
+        phonetic: '/SHärt/',
+        definition: 'To expel feces accidentally when breaking wind.'
       }
     default:
       return null;
