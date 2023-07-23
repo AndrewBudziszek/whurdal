@@ -716,7 +716,9 @@ const wordList: string[] = [
   'DOGGY',
   'FRAME',
   'SHART',
-  'BROKE'
+  'BROKE',
+  'SLACK',
+  'WHALE'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART'];
