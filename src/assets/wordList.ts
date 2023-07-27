@@ -714,6 +714,7 @@ const wordList: string[] = [
   'CHURL',
   'HOMEY',
   'SKUNK',
+  'BIBLE',
   'STYLE',
   'DOGGY',
   'FRAME',
@@ -726,9 +727,12 @@ const wordList: string[] = [
   'WHELM',
   'CHART',
   'FORGE',
+  'CINCH',
+  'DISCO',
+  'ISLAM',
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART'];
+export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -810,6 +814,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/SHärt/',
         definition: 'To expel feces accidentally when breaking wind.'
+      }
+    case 'ISLAM':
+      return {
+        phonetic: '/ˈisläm/',
+        definition: 'The religion of the Muslims, a monotheistic faith regarded as revealed through Muhammad as the Prophet of Allah.'
       }
     default:
       return null;
