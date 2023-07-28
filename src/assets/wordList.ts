@@ -730,6 +730,8 @@ const wordList: string[] = [
   'CINCH',
   'DISCO',
   'ISLAM',
+  'ETHOS',
+  'KARMA'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM'];
