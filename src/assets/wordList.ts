@@ -727,6 +727,7 @@ const wordList: string[] = [
   'WHALE',
   'HORNY',
   'WHELM',
+  'SPARE',
   'BULKY',
   'CHART',
   'FORGE',
@@ -734,9 +735,12 @@ const wordList: string[] = [
   'DISCO',
   'ISLAM',
   'ETHOS',
+  'WHARE',
   'KARMA',
   'BAMBI',
   'CURLY',
+  'BATHE',
+  'WHORE',
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM'];
