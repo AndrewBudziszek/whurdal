@@ -756,7 +756,11 @@ const wordList: string[] = [
   'AGREE',
   'BEGET',
   'WEAVE',
-  'LEGGO'
+  'LEGGO',
+  'FLOUR',
+  'BLEED',
+  'CRAMP',
+  'APORT'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO'];
