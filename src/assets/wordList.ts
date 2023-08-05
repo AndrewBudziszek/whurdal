@@ -526,7 +526,7 @@ const wordList: string[] = [
   'BRINK',
   'SPIEL',
   'ELDER',
-  'GLOAT',
+  'GLOAT', // 8/4/2023
   'UNFED',
   'WACKY',
   'STOOL',
@@ -709,6 +709,7 @@ const wordList: string[] = [
   'TOPAZ',
   'BASTI',
   'TWIST',
+  'CURVE',
   'PORNO',
   'WRANG',
   'GRONE',
@@ -720,13 +721,16 @@ const wordList: string[] = [
   'CHURL',
   'HOMEY',
   'SKUNK',
+  'CHOCK',
   'BIBLE',
   'STYLE',
   'DOGGY',
+  'SNEER',
   'FRAME',
   'SHART',
   'CHIMP',
   'BROKE',
+  'KITTY',
   'SLACK',
   'WHALE',
   'HORNY',
@@ -736,34 +740,92 @@ const wordList: string[] = [
   'STILE',
   'CHART',
   'FORGE',
+  'BLOOM',
   'CINCH',
   'DISCO',
   'ISLAM',
   'ETHOS',
+  'SPICE',
   'WHARE',
   'TWINE',
+  'CARVE',
   'KARMA',
+  'SKEET',
   'BAMBI',
   'CURLY',
+  'SMALL',
   'BATHE',
   'WHORE',
   'SWEAT',
+  'TRAIL',
+  'MOMMY',
+  'INBOX',
   'CLUMP',
+  'SNORE',
   'BRINE',
   'SPADE',
   'TENTH',
+  'POACH',
+  'SPORT',
   'BOGEY',
   'AGREE',
   'BEGET',
+  'SLEEP',
   'WEAVE',
   'LEGGO',
   'FLOUR',
   'BLEED',
+  'NANNY',
+  'SONIC',
   'CRAMP',
-  'APORT'
+  'SMACK',
+  'APORT',
+  'MARIO',
+  'WITCH',
+  'UNLET',
+  'CHOKE',
+  'SPOON',
+  'CHOMP',
+  'SHADE',
+  'PSYCH',
+  'HINKY',
+  'JIFFY',
+  'LABOR',
+  'SHUNT',
+  'DEVIL',
+  'SAUCE',
+  'FANCY',
+  'TRIAL',
+  'FLOOR',
+  'CHAIR',
+  'WOUND',
+  'DADDY',
+  'PORCH',
+  'SCRAM',
+  'GROPE',
+  'LAUGH',
+  'COMFY',
+  'BRIDE',
+  'ANKLE',
+  'ELOTE',
+  'GRILL',
+  'RINSE',
+  'CURSE',
+  'BLINK',
+  'SOBER',
+  'ENJOY',
+  'COCOA',
+  'OCTAL',
+  'STEAL',
+  'BLADE',
+  'ROWDY',
+  'TRAIN',
+  'SMOCK',
+  'CHILI',
+  'BUNNY'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO'];
+export const nonSowpodsAcceptedWords: string[] = ['MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -855,6 +917,21 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈleɡō/',
         definition: '...my Eggo.'
+      }
+    case 'INBOX':
+      return {
+        phonetic: '/ˈinˌbäks/',
+        definition: 'An electronic folder in which emails received by an individual are held.'
+      }
+    case 'MARIO':
+      return {
+        phonetic: '/ˈmerēˌō/',
+        definition: 'A fictional character in the Mario video game franchise, owned by Nintendo and created by Japanese video game designer Shigeru Miyamoto.'
+      }
+    case 'ELOTE':
+      return {
+        phonetic: '/əˈlōtē/',
+        definition: 'A popular Mexican street food made from corn on the cob that is grilled and then coated in a mixture of mayonnaise, sour cream, cotija cheese, chile powder, and lime.'
       }
     default:
       return null;
