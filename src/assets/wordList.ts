@@ -825,6 +825,11 @@ const wordList: string[] = [
   'CHILI',
   'BUNNY',
   'PYLON',
+  'COMET',
+  'OMEGA',
+  'EMPTY',
+  'MOULD',
+  'AMBER'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE'];
