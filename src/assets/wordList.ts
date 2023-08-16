@@ -816,6 +816,7 @@ const wordList: string[] = [
   'SOBER',
   'ENJOY',
   'COCOA',
+  'SCRUB',
   'OCTAL',
   'STEAL',
   'BLADE',
@@ -829,7 +830,8 @@ const wordList: string[] = [
   'OMEGA',
   'EMPTY',
   'MOULD',
-  'AMBER'
+  'AMBER',
+  'SUPRA',
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE'];
