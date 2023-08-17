@@ -824,17 +824,30 @@ const wordList: string[] = [
   'TRAIN',
   'SMOCK',
   'CHILI',
+  'SPICY',
   'BUNNY',
   'PYLON',
   'COMET',
+  'AGISM',
   'OMEGA',
   'EMPTY',
   'MOULD',
   'AMBER',
   'SUPRA',
+  'QUASI',
+  'SWORD',
+  'CONVO',
+  'JAPAN',
+  'BLITE',
+  'ROVER',
+  'SNOWY',
+  'COMBO',
+  'SMELL',
+  'IRISH',
+  'SHAKE',
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE'];
+export const nonSowpodsAcceptedWords: string[] = ['MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -941,6 +954,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/əˈlōtē/',
         definition: 'A popular Mexican street food made from corn on the cob that is grilled and then coated in a mixture of mayonnaise, sour cream, cotija cheese, chile powder, and lime.'
+      }
+    case 'IRISH':
+      return {
+        phonetic: '/ˈīriSH/',
+        definition: 'A native or inhabitant of Ireland, or a person of Irish descent.'
       }
     default:
       return null;
