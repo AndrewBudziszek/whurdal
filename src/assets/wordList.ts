@@ -814,6 +814,7 @@ const wordList: string[] = [
   'CURSE',
   'BLINK',
   'SOBER',
+  'EXFIL',
   'ENJOY',
   'COCOA',
   'SCRUB',
@@ -826,6 +827,7 @@ const wordList: string[] = [
   'CHILI',
   'SPICY',
   'BUNNY',
+  'INFIL',
   'PYLON',
   'COMET',
   'AGISM',
@@ -845,9 +847,10 @@ const wordList: string[] = [
   'SMELL',
   'IRISH',
   'SHAKE',
+  'INTEL'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
+export const nonSowpodsAcceptedWords: string[] = ['EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -899,6 +902,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈprōdō/',
         definition: 'A prototype.'
+      }
+    case 'INFIL':
+      return {
+        phonetic: '/ˈinˌfil/',
+        definition: 'To infiltrate.'
       }
     case 'ZELDA':
       return {
@@ -959,6 +967,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈīriSH/',
         definition: 'A native or inhabitant of Ireland, or a person of Irish descent.'
+      }
+    case 'EXFIL':
+      return {
+        phonetic: '/ˈeksˌfil/',
+        definition: 'To remove (someone) from a hostile area of operations by rapid movement.'
       }
     default:
       return null;
