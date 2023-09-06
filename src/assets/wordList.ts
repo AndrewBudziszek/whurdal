@@ -559,7 +559,7 @@ const wordList: string[] = [
   'CACHE',
   'MOTEL',
   'TRUSS',
-  'UNTIE',
+  'UNTIE', // 9/6/23
   'INPUT',
   'LARVA',
   'AMPLE',
@@ -832,6 +832,7 @@ const wordList: string[] = [
   'SMOCK',
   'CHILI',
   'SPICY',
+  'AWASH',
   'BUNNY',
   'INFIL',
   'BRAID',
@@ -853,20 +854,42 @@ const wordList: string[] = [
   'JAPAN',
   'BLITE',
   'ROVER',
+  'HOCUS',
   'GHOUL',
+  'WORDY',
   'SNOWY',
   'COMBO',
   'SMELL',
   'MOUTH',
   'IRISH',
   'SHAKE',
+  'GNASH',
+  'POCUS',
   'INTEL',
   'TRIKE',
   'BRASS',
   'SPOUT',
+  'FLASH',
+  'CAPER',
+  'GNARL',
+  'STEAD',
+  'VERVE',
+  'MAGMA',
+  'FOLLY',
+  'CRONE',
+  'FLYER',
+  'BANJO',
+  'GUARD',
+  'FROST',
+  'UTTER',
+  'SCARF',
+  'LOCUS',
+  'PETAL',
+  'LIGER',
+  'STALK'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
+export const nonSowpodsAcceptedWords: string[] = ['POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -988,6 +1011,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈeksˌfil/',
         definition: 'To remove (someone) from a hostile area of operations by rapid movement.'
+      }
+    case 'POCUS':
+      return {
+        phonetic: '/ˈpōkəs/',
+        definition: 'Hocus... Pocus.'
       }
     default:
       return null;
