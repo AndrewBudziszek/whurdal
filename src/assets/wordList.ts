@@ -903,6 +903,7 @@ const wordList: string[] = [
   'FRISK',
   'CHILD',
   'SNARK',
+  'CAROL',
   'ALLEY',
   'TROUT',
   'SLINK',
