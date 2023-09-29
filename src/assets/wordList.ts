@@ -898,23 +898,41 @@ const wordList: string[] = [
   'PETAL',
   'SCOPE',
   'LIGER',
+  'COACH',
   'STALK',
   'BROWN',
   'FRISK',
   'CHILD',
   'SNARK',
   'CAROL',
+  'SQUID',
   'ALLEY',
   'TROUT',
+  'CRUNK',
   'SLINK',
   'DRILL',
+  'STORK',
   'TREAT',
+  'CONDO',
   'DOOZY',
   'HANDY',
   'SPOIL',
+  'CLANG',
+  'NEATO',
+  'HEARD',
+  'SATIN',
+  'NSYNC',
+  'CRANK',
+  'FROTH',
+  'CIVIC',
+  'BROOM',
+  'CAMEL',
+  'BRAKE',
+  'CLOTH',
+  'SPAIN',
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
+export const nonSowpodsAcceptedWords: string[] = ['NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -1041,6 +1059,21 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈpōkəs/',
         definition: 'Hocus... Pocus.'
+      }
+    case 'CRUNK':
+      return {
+        phonetic: '/krəNGk/',
+        definition: 'A type of hip-hop music originating in the southern United States, characterized by heavy bass and call-and-response vocals.'
+      }
+    case 'NEATO':
+      return {
+        phonetic: '/ˈnēdō/',
+        definition: 'Neat.'
+      }
+    case 'NSYNC':
+      return {
+        phonetic: '/ˈensɪŋk/',
+        definition: 'An American vocal group and boy band.'
       }
     default:
       return null;
