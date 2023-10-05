@@ -1,4 +1,4 @@
-const phrases = [
+export const phrases = [
   'Hello, Whurld!',
   'It\'s quite the day!',
   'Sieze the means of production!',
