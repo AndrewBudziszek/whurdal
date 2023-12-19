@@ -931,6 +931,7 @@ const wordList: string[] = [
   'CAMEL',
   'FUNNY',
   'SHIFT',
+  'TABLE',
   'BRAKE',
   'SIEVE',
   'CLOTH',
@@ -958,7 +959,10 @@ const wordList: string[] = [
   'SMASH',
   'CAMEO',
   'GLOBE',
-  'SCENT'
+  'SCENT',
+  'TACKY',
+  'CHIVE',
+  'AMOUR',
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
