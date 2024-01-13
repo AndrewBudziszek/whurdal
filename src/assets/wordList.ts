@@ -957,12 +957,14 @@ const wordList: string[] = [
   'FEIGN',
   'SMITE',
   'DRANK',
+  'BECKY',
   'TRACK',
   'KNELT',
   'SMASH',
   'CAMEO',
   'GLOBE',
   'SCENT',
+  'WAFER',
   'TACKY',
   'PAINT',
   'CHIVE',
@@ -980,11 +982,30 @@ const wordList: string[] = [
   'IMBUE',
   'BUILT',
   'CUTIE',
+  'UNBOX',
   'SPEND',
   'TOUCH',
+  'DOINK',
+  'ONION',
+  'PLEAD',
+  'HEATH',
+  'VOCAB',
+  'CIDER',
+  'GRADE',
+  'SHILL',
+  'ARGUE',
+  'GUILT',
+  'REFER',
+  'TREND',
+  'SIGMA',
+  'KAREN',
+  'EMOJI',
+  'BLUEY',
+  'VEGAS',
+  'GYATT'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
+export const nonSowpodsAcceptedWords: string[] = ['GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -1021,6 +1042,31 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/CHäNGk/',
         definition: 'An unusually large cat.'
+      }
+    case 'GYATT':
+      return {
+        phonetic: '[gee-yot]',
+        definition: 'Slang - Used to express strong excitement, surprise, or admiration.'
+      }
+    case 'BECKY':
+      return {
+        phonetic: '/ˈbɛki/',
+        definition: 'Slang -  A pejorative American slang term for a young White woman. Particularly associated with women who love Starbucks and Uggs and is ignorant to racial and social issues.'
+      }
+    case 'EMOJI':
+      return {
+        phonetic: '/iˈmōjē/',
+        definition: 'A small digital image used to express an idea, emotion, etc. Derived from a Japanese word that means "picture letter."'
+      }
+    case 'KAREN':
+      return {
+        phonetic: 'kair-in',
+        definition: 'Slang - A pejorative slang term for an obnoxious, angry, entitled, and often racist middle-aged white woman who uses her privilege to get her way or police other people’s behaviors'
+      }
+    case 'DOINK':
+      return {
+        phonetic: '/doingk/',
+        definition: 'Another name for a blunt. "I can\'t wait to doink a doinker tonight!"'
       }
     case 'GRATZ':
       return {
