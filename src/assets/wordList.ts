@@ -1002,10 +1002,16 @@ const wordList: string[] = [
   'EMOJI',
   'BLUEY',
   'VEGAS',
-  'GYATT'
+  'GYATT',
+  'LUNCH',
+  'SHEER',
+  'WEARY',
+  'SLUNG',
+  'BLOND',
+  'KOREA'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
+export const nonSowpodsAcceptedWords: string[] = ['KOREA', 'GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -1052,6 +1058,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/ˈbɛki/',
         definition: 'Slang -  A pejorative American slang term for a young White woman. Particularly associated with women who love Starbucks and Uggs and is ignorant to racial and social issues.'
+      }
+    case 'KOREA':
+      return {
+        phonetic: '/kɔˈriə/',
+        definition: 'Korea is a peninsular region in East Asia. Since 1945, it has been divided at or near the 38th parallel.'
       }
     case 'EMOJI':
       return {
