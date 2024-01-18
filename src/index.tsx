@@ -8,9 +8,9 @@ axios.defaults.headers.common = {
   "X-API-Key": `${process.env.REACT_APP_WHURDAL_API_KEY}`,
 };
 
-if(process.env.REACT_APP_WHURDAL_ENV !== 'dev') {
-  console.log = () => {}
-  axios.put('https://413tj2e8b5.execute-api.us-east-1.amazonaws.com/prod/', { "lookupID": "views" });
+if (process.env.REACT_APP_WHURDAL_ENV !== 'dev' && process.env.REACT_APP_API_URL) {
+  console.log = () => { }
+  axios.put(process.env.REACT_APP_API_URL, { "lookupID": "views" });
 }
 
 ReactDOM.render(
