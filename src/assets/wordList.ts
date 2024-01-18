@@ -1012,7 +1012,9 @@ const wordList: string[] = [
   'DONUT',
   'SMORE',
   'GUILD',
-  'PICKY'
+  'PICKY',
+  'STOLE',
+  'THYME',
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['KOREA', 'GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
