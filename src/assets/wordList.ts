@@ -1015,6 +1015,15 @@ const wordList: string[] = [
   'PICKY',
   'STOLE',
   'THYME',
+  'RELIC',
+  'CELLO',
+  'TREAD',
+  'GAUGE',
+  'CLERK',
+  'PUPIL',
+  'CLOCK',
+  'POPPY',
+  'BREAM'
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['KOREA', 'GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
