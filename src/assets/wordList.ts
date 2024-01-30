@@ -1005,6 +1005,7 @@ const wordList: string[] = [
   'GYATT',
   'LUNCH',
   'SHEER',
+  'PLUTO',
   'WEARY',
   'SLUNG',
   'BLOND',
@@ -1018,15 +1019,28 @@ const wordList: string[] = [
   'RELIC',
   'CELLO',
   'TREAD',
+  'CHEER',
   'GAUGE',
   'CLERK',
+  'VENUS',
   'PUPIL',
   'CLOCK',
   'POPPY',
-  'BREAM'
+  'BREAM',
+  'FLEET',
+  'BORED',
+  'FEVER',
+  'STAKE',
+  'DWARF',
+  'COAST',
+  'EARTH',
+  'HYDRA',
+  'PLAIN',
+  'FABLE',
+  'EXPAT'
 ];
 
-export const nonSowpodsAcceptedWords: string[] = ['KOREA', 'GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
+export const nonSowpodsAcceptedWords: string[] = ['KOREA', 'PLUTO', 'GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
 
 export function verifyWordsInList(): string[] {
   let rejectedWords: string[] = [];
@@ -1063,6 +1077,11 @@ export function getNonSowpodsDefinition(word: string): Definition | null {
       return {
         phonetic: '/CHäNGk/',
         definition: 'An unusually large cat.'
+      }
+    case 'PLUTO':
+      return {
+        phonetic: '/ˈpluː.t̬oʊ/',
+        definition: 'A dwarf planet in the Kuiper belt.'
       }
     case 'GYATT':
       return {
