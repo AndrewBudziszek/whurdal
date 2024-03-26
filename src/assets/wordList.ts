@@ -1142,7 +1142,13 @@ const wordList: string[] = [
   'CURIO',
   'BUYER',
   'AVOID',
-  'INGOT'
+  'INGOT',
+  'PASTY',
+  'MAYOR',
+  'RISER',
+  'NURSE',
+  'SHOOT',
+
 ];
 
 export const nonSowpodsAcceptedWords: string[] = ['MIAMI', 'KOREA', 'PLUTO', 'GYATT', 'BECKY', 'KAREN', 'EMOJI', 'DOINK', 'NSYNC', 'NEATO', 'CRUNK', 'POCUS', 'EXFIL', 'INFIL', 'MARIO', 'CHONK', 'GRATZ', 'FRUNK', 'PROTO', 'ZELDA', 'PANKO', 'GLAMP', 'SHREK', 'SHART', 'ISLAM', 'LEGGO', 'INBOX', 'ELOTE', 'IRISH'];
